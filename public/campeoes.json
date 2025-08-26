@@ -1,0 +1,77 @@
+[
+  {
+    "id": "Aatrox", "nome": "Aatrox", "funcao_primaria": "Top", "tipo_dano": "AD", "nivel_cc": "Médio", "estilo_jogo": ["Lutador", "Dive", "Teamfight"], "forca": "Mid Game", "tipo_de_engage": "Primário", "sinergias_fortes_com": ["Jarvan IV", "Gragas", "Galio"], "fraco_contra": ["Fiora", "Irelia", "Kled"]
+  },
+  {
+    "id": "Ahri", "nome": "Ahri", "funcao_primaria": "Mid", "tipo_dano": "AP", "nivel_cc": "Médio", "estilo_jogo": ["Mago", "Burst", "Pickoff"], "forca": "Mid Game", "tipo_de_engage": "Secundário", "sinergias_fortes_com": ["Jarvan IV", "Vi", "Lee Sin"], "fraco_contra": ["Yasuo", "Lissandra", "Fizz"]
+  },
+  {
+    "id": "Ashe", "nome": "Ashe", "funcao_primaria": "ADC", "tipo_dano": "AD", "nivel_cc": "Alto", "estilo_jogo": ["Atirador", "Utilidade", "Kite"], "forca": "Late Game", "tipo_de_engage": "Primário", "sinergias_fortes_com": ["Braum", "Leona", "Thresh"], "fraco_contra": ["Sivir", "Draven", "Yasuo"]
+  },
+  {
+    "id": "Caitlyn", "nome": "Caitlyn", "funcao_primaria": "ADC", "tipo_dano": "AD", "nivel_cc": "Médio", "estilo_jogo": ["Atirador", "Poke", "Siege"], "forca": "Early Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Morgana", "Lux", "Janna"], "fraco_contra": ["Sivir", "Jinx", "Tristana"]
+  },
+  {
+    "id": "Darius", "nome": "Darius", "funcao_primaria": "Top", "tipo_dano": "AD", "nivel_cc": "Baixo", "estilo_jogo": ["Lutador", "Juggernaut"], "forca": "Early Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Yummi", "Lulu", "Zilean"], "fraco_contra": ["Vayne", "Quinn", "Kayle"]
+  },
+  {
+    "id": "Janna", "nome": "Janna", "funcao_primaria": "Suporte", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Protetor", "Enchanter", "Peel", "Disengage"], "forca": "Mid Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Kog'Maw", "Vayne", "Jinx"], "fraco_contra": ["Nami", "Sona", "Soraka"]
+  },
+  {
+    "id": "JarvanIV", "nome": "Jarvan IV", "funcao_primaria": "Jungle", "tipo_dano": "AD", "nivel_cc": "Alto", "estilo_jogo": ["Lutador", "Dive", "Engage"], "forca": "Early Game", "tipo_de_engage": "Primário", "sinergias_fortes_com": ["Orianna", "Miss Fortune", "Galio"], "fraco_contra": ["Trundle", "Olaf", "Graves"]
+  },
+  {
+    "id": "Jhin", "nome": "Jhin", "funcao_primaria": "ADC", "tipo_dano": "AD", "nivel_cc": "Médio", "estilo_jogo": ["Atirador", "Burst", "Pickoff"], "forca": "Mid Game", "tipo_de_engage": "Secundário", "sinergias_fortes_com": ["Xerath", "Janna", "Nami"], "fraco_contra": ["Lucian", "Tristana", "Yasuo"]
+  },
+  {
+    "id": "Jinx", "nome": "Jinx", "funcao_primaria": "ADC", "tipo_dano": "AD", "nivel_cc": "Médio", "estilo_jogo": ["Atirador", "Hiper-carry", "Late Game"], "forca": "Late Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Lulu", "Thresh", "Janna"], "fraco_contra": ["Draven", "Caitlyn", "Varus"]
+  },
+  {
+    "id": "KogMaw", "nome": "Kog'Maw", "funcao_primaria": "ADC", "tipo_dano": "Híbrido", "nivel_cc": "Baixo", "estilo_jogo": ["Atirador", "Hiper-carry", "Late Game"], "forca": "Late Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Lulu", "Janna", "Braum"], "fraco_contra": ["Lucian", "Miss Fortune", "Jhin"]
+  },
+  {
+    "id": "LeeSin", "nome": "Lee Sin", "funcao_primaria": "Jungle", "tipo_dano": "AD", "nivel_cc": "Médio", "estilo_jogo": ["Lutador", "Dive", "Early Game"], "forca": "Early Game", "tipo_de_engage": "Secundário", "sinergias_fortes_com": ["Yasuo", "Orianna", "Ahri"], "fraco_contra": ["Trundle", "Udyr", "Rammus"]
+  },
+  {
+    "id": "Leona", "nome": "Leona", "funcao_primaria": "Suporte", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Tanque", "Engage", "All-in"], "forca": "Early Game", "tipo_de_engage": "Primário", "sinergias_fortes_com": ["Miss Fortune", "Draven", "Jhin"], "fraco_contra": ["Morgana", "Janna", "Alistar"]
+  },
+  {
+    "id": "Lulu", "nome": "Lulu", "funcao_primaria": "Suporte", "tipo_dano": "AP", "nivel_cc": "Médio", "estilo_jogo": ["Protetor", "Enchanter", "Peel"], "forca": "Mid Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Kog'Maw", "Jinx", "Vayne"], "fraco_contra": ["Leona", "Blitzcrank", "Nami"]
+  },
+  {
+    "id": "Lux", "nome": "Lux", "funcao_primaria": "Mid", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Mago", "Burst", "Poke", "Siege"], "forca": "Mid Game", "tipo_de_engage": "Secundário", "sinergias_fortes_com": ["Caitlyn", "Jarvan IV", "Morgana"], "fraco_contra": ["Fizz", "Zed", "Katarina"]
+  },
+  {
+    "id": "Malphite", "nome": "Malphite", "funcao_primaria": "Top", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Tanque", "Engage", "Teamfight"], "forca": "Mid Game", "tipo_de_engage": "Primário", "sinergias_fortes_com": ["Yasuo", "Orianna", "Miss Fortune"], "fraco_contra": ["Sylas", "Rumble", "Mordekaiser"]
+  },
+  {
+    "id": "MasterYi", "nome": "Master Yi", "funcao_primaria": "Jungle", "tipo_dano": "AD", "nivel_cc": "Baixo", "estilo_jogo": ["Hiper-carry", "Lutador", "Late Game"], "forca": "Late Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Lulu", "Taric", "Kayle"], "fraco_contra": ["Rammus", "Jax", "Hard CC"]
+  },
+  {
+    "id": "MissFortune", "nome": "Miss Fortune", "funcao_primaria": "ADC", "tipo_dano": "AD", "nivel_cc": "Baixo", "estilo_jogo": ["Atirador", "Teamfight", "Burst"], "forca": "Mid Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Leona", "Malphite", "Amumu"], "fraco_contra": ["Draven", "Yasuo", "Braum"]
+  },
+  {
+    "id": "Morgana", "nome": "Morgana", "funcao_primaria": "Suporte", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Mago", "Pickoff", "Anti-CC"], "forca": "Early Game", "tipo_de_engage": "Secundário", "sinergias_fortes_com": ["Caitlyn", "Jhin", "Lux"], "fraco_contra": ["Karma", "Soraka", "Zyra"]
+  },
+  {
+    "id": "Nautilus", "nome": "Nautilus", "funcao_primaria": "Suporte", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Tanque", "Engage", "Pickoff"], "forca": "Early Game", "tipo_de_engage": "Primário", "sinergias_fortes_com": ["Jhin", "Draven", "Kalista"], "fraco_contra": ["Morgana", "Janna", "Braum"]
+  },
+  {
+    "id": "Orianna", "nome": "Orianna", "funcao_primaria": "Mid", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Mago", "Controle", "Teamfight"], "forca": "Late Game", "tipo_de_engage": "Secundário", "sinergias_fortes_com": ["Jarvan IV", "Malphite", "Rengar"], "fraco_contra": ["Zed", "Fizz", "Xerath"]
+  },
+  {
+    "id": "Ornn", "nome": "Ornn", "funcao_primaria": "Top", "tipo_dano": "Híbrido", "nivel_cc": "Alto", "estilo_jogo": ["Tanque", "Engage", "Teamfight", "Late Game"], "forca": "Late Game", "tipo_de_engage": "Primário", "sinergias_fortes_com": ["Jarvan IV", "Sejuani", "Lillia"], "fraco_contra": ["Fiora", "Gwen", "Olaf"]
+  },
+  {
+    "id": "Rammus", "nome": "Rammus", "funcao_primaria": "Jungle", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Tanque", "Engage", "Anti-AD"], "forca": "Mid Game", "tipo_de_engage": "Primário", "sinergias_fortes_com": ["Galio", "Lissandra", "Twisted Fate"], "fraco_contra": ["Trundle", "Lillia", "Morgana"]
+  },
+  {
+    "id": "Yasuo", "nome": "Yasuo", "funcao_primaria": "Mid", "tipo_dano": "AD", "nivel_cc": "Médio", "estilo_jogo": ["Lutador", "Hiper-carry", "Teamfight"], "forca": "Mid Game", "tipo_de_engage": "Secundário", "sinergias_fortes_com": ["Malphite", "Ornn", "Nautilus"], "fraco_contra": ["Annie", "Renekton", "Jax"]
+  },
+  {
+    "id": "Zed", "nome": "Zed", "funcao_primaria": "Mid", "tipo_dano": "AD", "nivel_cc": "Baixo", "estilo_jogo": ["Assassino", "Split Push", "Pickoff"], "forca": "Mid Game", "tipo_de_engage": "Nenhum", "sinergias_fortes_com": ["Jarvan IV", "Leona", "Nautilus"], "fraco_contra": ["Lissandra", "Kayle", "Malphite"]
+  },
+  {
+    "id": "Zoe", "nome": "Zoe", "funcao_primaria": "Mid", "tipo_dano": "AP", "nivel_cc": "Alto", "estilo_jogo": ["Mago", "Burst", "Pickoff", "Poke"], "forca": "Mid Game", "tipo_de_engage": "Secundário", "sinergias_fortes_com": ["Jarvan IV", "Elise", "Nidalee"], "fraco_contra": ["Yasuo", "Irelia", "Fizz"]
+  }
+]
