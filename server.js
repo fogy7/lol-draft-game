@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
 
     if (waitingPlayer) {
         // Se já existe um jogador esperando, cria uma sala e inicia o jogo
-        const roomName = `room_${socket.id}_${waitingPlayer.id}`;
+        const roomName = `room_${waitingPlayer.id}_${socket.id}`;
         
         // Coloca ambos os jogadores na mesma sala
         waitingPlayer.join(roomName);
@@ -39,25 +39,26 @@ io.on('connection', (socket) => {
             blueScore: 0,
             redScore: 0,
             turn: 0,
-            pickedChampions: new Set(),
+            pickedChampions: [], // usar array para serialização
             draftOrder: ['blue', 'red', 'red', 'blue', 'blue', 'red', 'red', 'blue', 'blue', 'red'],
             draftRoles: ['TOP', 'JG', 'MID', 'ADC', 'SUP', 'TOP', 'JG', 'MID', 'ADC', 'SUP']
         };
 
         console.log(`Jogo iniciado na sala ${roomName} entre ${waitingPlayer.id} e ${socket.id}`);
         
-        // Avisa aos jogadores que o jogo começou
-        io.to(roomName).emit('game-start', {
+        // Envia start individualmente para evitar sobrescritas/ambigüidade
+        waitingPlayer.emit('game-start', {
             room: roomName,
-            yourTeam: 'blue', // O primeiro jogador é sempre o azul
+            yourTeam: 'blue', // jogador que estava esperando
             opponentTeam: 'red'
         });
-        io.to(socket.id).emit('game-start', {
+        socket.emit('game-start', {
             room: roomName,
-            yourTeam: 'red',
+            yourTeam: 'red', // jogador que acabou de entrar
             opponentTeam: 'blue'
         });
         
+        // Envia estado inicial da sala para ambos
         io.to(roomName).emit('game-update', gameRooms[roomName]);
         waitingPlayer = null; // Limpa o jogador em espera
 
@@ -78,7 +79,7 @@ io.on('connection', (socket) => {
     const currentTeam = playerTeamColor === 'blue' ? room.blueTeam : room.redTeam;
 
     // Validação extra: a rota está disponível?
-    if (playerTeamColor === currentTurnColor && !room.pickedChampions.has(champion.id) && currentTeam[role] === null) {
+    if (playerTeamColor === currentTurnColor && !room.pickedChampions.includes(champion.id) && currentTeam[role] === null) {
         const alliedTeam = Object.values(currentTeam).filter(c => c !== null); // Pega os campeões já escolhidos
         const enemyTeam = Object.values(playerTeamColor === 'blue' ? room.redTeam : room.blueTeam).filter(c => c !== null);
 
@@ -92,7 +93,7 @@ io.on('connection', (socket) => {
             room.redScore += score;
         }
 
-        room.pickedChampions.add(champion.id);
+        room.pickedChampions.push(champion.id);
         room.turn++;
 
         io.to(roomId).emit('game-update', room);
@@ -116,8 +117,8 @@ io.on('connection', (socket) => {
             room.blueScore = 0;
             room.redScore = 0;
             room.turn = 0;
-            room.pickedChampions = new Set();
-            
+            room.pickedChampions = [];
+
             console.log(`Jogo na sala ${roomId} foi reiniciado.`);
             // Envia o estado zerado para ambos os jogadores
             io.to(roomId).emit('game-update', room);
