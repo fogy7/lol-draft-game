@@ -1,21 +1,43 @@
-// public/script.js
+// public/script.js - VERSÃO MELHORADA E AUTOMÁTICA
 
-document.addEventListener('DOMContentLoaded', () => {
-    const socket = io(); // Conecta ao servidor Socket.IO
+document.addEventListener('DOMContentLoaded', async () => { // Adicionamos 'async' aqui
+    const socket = io();
 
     // Elementos da UI
     const championGrid = document.getElementById('champion-grid');
     const blueTeamPicksContainer = document.getElementById('blue-team-picks');
     const redTeamPicksContainer = document.getElementById('red-team-picks');
     const turnIndicator = document.getElementById('turn-indicator');
-    const pickInfo = document.getElementById('pick-info');
     const blueScoreDisplay = document.getElementById('blue-score');
     const redScoreDisplay = document.getElementById('red-score');
 
     let allChampions = [];
     let myTeam = null;
     let roomId = null;
-    const DDRAGON_URL = "https://ddragon.leagueoflegends.com/cdn/15.17.1/img/champion/";
+
+    // --- NOVA LÓGICA AUTOMÁTICA ---
+    let DDRAGON_URL = '';
+
+    async function initializeGame() {
+        try {
+            console.log("Buscando a versão mais recente do Data Dragon...");
+            // 1. Busca a lista de todas as versões
+            const versionsResponse = await fetch('https://ddragon.leagueoflegends.com/api/versions.json');
+            const versions = await versionsResponse.json();
+            const latestVersion = versions[0]; // A primeira da lista é a mais recente
+            console.log(`Versão mais recente encontrada: ${latestVersion}`);
+
+            // 2. Monta a URL correta para as imagens
+            DDRAGON_URL = `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/img/champion/`;
+
+            // 3. Carrega os campeões do nosso arquivo JSON
+            await loadChampions();
+        } catch (error) {
+            console.error("Erro ao inicializar o jogo:", error);
+            turnIndicator.innerText = "Erro ao carregar dados do jogo.";
+        }
+    }
+    // --------------------------------
 
     async function loadChampions() {
         try {
@@ -33,9 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const champDiv = document.createElement('div');
             champDiv.classList.add('champion-icon');
             champDiv.dataset.id = champ.id;
+            // Usa a URL dinâmica que buscamos
             champDiv.innerHTML = `<img src="${DDRAGON_URL}${champ.id}.png" alt="${champ.nome}">`;
             
-            // A ação de clique agora envia um evento para o servidor
             champDiv.addEventListener('click', () => {
                 if(roomId){
                     socket.emit('champion-pick', { roomId, champion: champ });
@@ -46,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- OUVINTES DE EVENTOS DO SERVIDOR ---
-
     socket.on('waiting', (message) => {
         turnIndicator.innerText = message;
     });
@@ -54,33 +75,33 @@ document.addEventListener('DOMContentLoaded', () => {
     socket.on('game-start', (data) => {
         myTeam = data.yourTeam;
         roomId = data.room;
-        // Atualiza a interface para mostrar qual time você é
         document.querySelector(`.${myTeam}-team`).style.border = '3px solid #c89b3c';
     });
 
     socket.on('game-update', (gameState) => {
-        // A função de update agora apenas renderiza o estado recebido do servidor
         updateUI(gameState);
     });
     
     // --- FUNÇÃO DE RENDERIZAÇÃO ---
-    
     function updateUI(state) {
         blueScoreDisplay.innerText = state.blueScore;
         redScoreDisplay.innerText = state.redScore;
 
-        updateTeamPicks(blueTeamPicksContainer, state.blueTeam, state.draftRoles);
-        updateTeamPicks(redTeamPicksContainer, state.redTeam, state.draftRoles);
+        const roles = ['TOP', 'JG', 'MID', 'ADC', 'SUP'];
+        updateTeamPicks(blueTeamPicksContainer, state.blueTeam, roles);
+        updateTeamPicks(redTeamPicksContainer, state.redTeam, roles);
+
+        const pickedIds = new Set(state.blueTeam.map(c => c.id).concat(state.redTeam.map(c => c.id)));
 
         document.querySelectorAll('.champion-icon').forEach(icon => {
-            if (state.pickedChampions.includes(icon.dataset.id) || Array.from(state.pickedChampions).some(c => c.id === icon.dataset.id)) {
+            if (pickedIds.has(icon.dataset.id)) {
                 icon.classList.add('picked');
             } else {
                 icon.classList.remove('picked');
             }
         });
 
-        if (state.turn < state.draftOrder.length) {
+        if (state.turn < 10) {
             const currentTurnColor = state.draftOrder[state.turn];
             turnIndicator.innerText = `Vez do Time ${currentTurnColor === 'blue' ? 'Azul' : 'Vermelho'}`;
             turnIndicator.style.color = currentTurnColor === 'blue' ? '#59bfff' : '#ff5959';
@@ -108,5 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    loadChampions();
+    // Inicia o jogo com a nova lógica
+    initializeGame();
 });
