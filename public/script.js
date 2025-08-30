@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allChampions = [];
     let myTeam = null;
     let roomId = null;
-    const DDRAGON_URL = "https://ddragon.leagueoflegends.com/cdn/13.24.1/img/champion/";
+    const DDRAGON_URL = "https://ddragon.leagueoflegends.com/cdn/15.17.1/img/champion/";
 
     async function loadChampions() {
         try {
