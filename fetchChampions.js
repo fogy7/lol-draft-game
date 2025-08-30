@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // URL do Data Dragon para a versão mais recente dos campeões em português
-const DDRAGON_URL = 'https://ddragon.leagueoflegends.com/cdn/14.17.1/data/pt_BR/champion.json';
+const DDRAGON_URL = 'https://ddragon.leagueoflegends.com/cdn/15.17.1/data/pt_BR/champion.json';
 // NOTA: A versão (14.17.1) pode ser atualizada no futuro.
 
 async function fetchAndProcessChampions() {

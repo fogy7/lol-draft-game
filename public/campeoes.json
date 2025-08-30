@@ -60,6 +60,18 @@
     "fraco_contra": []
   },
   {
+    "id": "Ambessa",
+    "nome": "Ambessa",
+    "funcao_primaria": "Mid",
+    "tipo_dano": "",
+    "nivel_cc": "",
+    "estilo_jogo": [],
+    "forca": "",
+    "tipo_de_engage": "",
+    "sinergias_fortes_com": [],
+    "fraco_contra": []
+  },
+  {
     "id": "Amumu",
     "nome": "Amumu",
     "funcao_primaria": "Suporte",
@@ -951,6 +963,18 @@
     "id": "MasterYi",
     "nome": "Master Yi",
     "funcao_primaria": "Jungle",
+    "tipo_dano": "",
+    "nivel_cc": "",
+    "estilo_jogo": [],
+    "forca": "",
+    "tipo_de_engage": "",
+    "sinergias_fortes_com": [],
+    "fraco_contra": []
+  },
+  {
+    "id": "Mel",
+    "nome": "Mel",
+    "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1911,6 +1935,18 @@
     "id": "Yorick",
     "nome": "Yorick",
     "funcao_primaria": "Top",
+    "tipo_dano": "",
+    "nivel_cc": "",
+    "estilo_jogo": [],
+    "forca": "",
+    "tipo_de_engage": "",
+    "sinergias_fortes_com": [],
+    "fraco_contra": []
+  },
+  {
+    "id": "Yunara",
+    "nome": "Yunara",
+    "funcao_primaria": "ADC",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
