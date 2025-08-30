@@ -107,6 +107,29 @@ io.on('connection', (socket) => {
         }
         // Adicionar lógica para encerrar jogos em andamento se um jogador sair
     });
+    socket.on('reset-game', (roomId) => {
+        const room = gameRooms[roomId];
+        if (room) {
+            // Reseta o estado do jogo para o inicial
+            room.blueTeam = { TOP: null, JG: null, MID: null, ADC: null, SUP: null };
+            room.redTeam = { TOP: null, JG: null, MID: null, ADC: null, SUP: null };
+            room.blueScore = 0;
+            room.redScore = 0;
+            room.turn = 0;
+            room.pickedChampions = new Set();
+            
+            console.log(`Jogo na sala ${roomId} foi reiniciado.`);
+            // Envia o estado zerado para ambos os jogadores
+            io.to(roomId).emit('game-update', room);
+        }
+    });
+
+// não se esqueça de adicionar a pequena lógica de 'get-game-state' que faltou na resposta anterior
+    socket.on('get-game-state', (roomId) => {
+        if (gameRooms[roomId]) {
+            socket.emit('game-state-response', gameRooms[roomId]);
+        }
+    });
 });
 
 // A função de pontuação (IA) agora vive no servidor

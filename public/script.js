@@ -1,22 +1,28 @@
-// public/script.js - VERSÃO COM SELEÇÃO DE ROTA
+// public/script.js - VERSÃO COM TELA FINAL
 
 document.addEventListener('DOMContentLoaded', async () => {
     const socket = io();
 
     // Elementos da UI
+    const draftContainer = document.querySelector('.draft-container');
     const championGrid = document.getElementById('champion-grid');
     const blueTeamPicksContainer = document.getElementById('blue-team-picks');
     const redTeamPicksContainer = document.getElementById('red-team-picks');
     const turnIndicator = document.getElementById('turn-indicator');
-    const blueScoreDisplay = document.getElementById('blue-score');
-    const redScoreDisplay = document.getElementById('red-score');
+
+    // Elementos da Tela Final
+    const endScreen = document.getElementById('end-screen');
+    const resultTitle = document.getElementById('result-title');
+    const myFinalScore = document.getElementById('my-final-score');
+    const opponentResultTitle = document.getElementById('opponent-result-title');
+    const opponentFinalScore = document.getElementById('opponent-final-score');
+    const scoreDifference = document.getElementById('score-difference');
+    const playAgainButton = document.getElementById('play-again-button');
 
     let allChampions = [];
     let myTeam = null;
     let roomId = null;
     let DDRAGON_URL = '';
-    
-    // NOVO ESTADO: Guarda o campeão que foi clicado, mas não confirmado
     let selectedChampion = null;
 
     async function initializeGame() {
@@ -32,74 +38,69 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     async function loadChampions() {
+        // ... (código existente sem alterações)
         const response = await fetch('campeoes.json');
         allChampions = await response.json();
         populateChampionGrid();
     }
 
     function populateChampionGrid() {
+        // ... (código existente sem alterações)
         championGrid.innerHTML = '';
         allChampions.forEach(champ => {
             const champDiv = document.createElement('div');
             champDiv.classList.add('champion-icon');
             champDiv.dataset.id = champ.id;
             champDiv.innerHTML = `<img src="${DDRAGON_URL}${champ.id}.png" alt="${champ.nome}">`;
-            
-            // O clique agora chama handleChampionClick
             champDiv.addEventListener('click', () => handleChampionClick(champ, champDiv));
             championGrid.appendChild(champDiv);
         });
     }
 
-    // --- NOVA LÓGICA DE SELEÇÃO ---
-
     function handleChampionClick(champion, element) {
-        // Se um campeão já estiver selecionado, desmarque-o
+        // ... (código existente sem alterações)
         if (selectedChampion) {
             document.querySelector('.champion-icon.selected')?.classList.remove('selected');
         }
-
-        // Seleciona o novo campeão
         selectedChampion = champion;
         element.classList.add('selected');
-        
-        // Atualiza a UI para destacar as rotas disponíveis
-        socket.emit('get-game-state', roomId); // Pede o estado atual para saber quais rotas estão livres
+        socket.emit('get-game-state', roomId);
     }
 
     function handleSlotClick(role, teamColor) {
-        // Só faz algo se um campeão estiver selecionado e for a vez do time correto
+        // ... (código existente sem alterações)
         if (selectedChampion && teamColor === myTeam) {
             socket.emit('champion-pick', { roomId, champion: selectedChampion, role });
-            
-            // Limpa o estado de seleção
             selectedChampion = null;
             document.querySelector('.champion-icon.selected')?.classList.remove('selected');
         }
     }
-    
-    // Adiciona os event listeners aos slots uma vez
+
     document.querySelectorAll('.pick-slot').forEach(slot => {
+        // ... (código existente sem alterações)
         const role = slot.dataset.role;
         const teamColor = slot.closest('.team-panel').classList.contains('blue-team') ? 'blue' : 'red';
         slot.addEventListener('click', () => handleSlotClick(role, teamColor));
     });
-    
-    // --- OUVINTES DO SERVIDOR ---
 
+    playAgainButton.addEventListener('click', () => {
+        endScreen.classList.remove('visible');
+        draftContainer.style.display = 'flex';
+        socket.emit('reset-game', roomId);
+    });
+
+    // --- OUVINTES DO SERVIDOR ---
     socket.on('waiting', (message) => turnIndicator.innerText = message);
 
     socket.on('game-start', (data) => {
         myTeam = data.yourTeam;
         roomId = data.room;
+        document.querySelectorAll('.team-panel').forEach(p => p.style.border = 'none');
         document.querySelector(`.${myTeam}-team`).style.border = '3px solid #c89b3c';
     });
     
-    // O servidor pode enviar o estado do jogo quando pedimos
     socket.on('game-state-response', (gameState) => {
-        if (gameState) {
-            updateUI(gameState);
-        }
+        if (gameState) updateUI(gameState);
     });
 
     socket.on('game-update', (gameState) => {
@@ -107,10 +108,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     function updateUI(state) {
-        // ... (código de updateUI continua na próxima seção)
-        blueScoreDisplay.innerText = state.blueScore;
-        redScoreDisplay.innerText = state.redScore;
-    
+        // A lógica de pontuação agora é invisível para o jogador
+        // document.getElementById('blue-score').innerText = state.blueScore; (REMOVIDO)
+        // document.getElementById('red-score').innerText = state.redScore; (REMOVIDO)
+
         updateTeamPicks(blueTeamPicksContainer, state.blueTeam, 'blue', state);
         updateTeamPicks(redTeamPicksContainer, state.redTeam, 'red', state);
     
@@ -125,11 +126,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             turnIndicator.innerText = `Vez do Time ${currentTurnColor === 'blue' ? 'Azul' : 'Vermelho'}`;
             turnIndicator.style.color = currentTurnColor === 'blue' ? '#59bfff' : '#ff5959';
         } else {
-            // ...
+            // FIM DO DRAFT - CHAMA A NOVA TELA
+            showEndScreen(state);
         }
     }
 
     function updateTeamPicks(container, team, teamColor, state) {
+        // ... (código existente sem alterações)
         const roles = ['TOP', 'JG', 'MID', 'ADC', 'SUP'];
         const currentTurnColor = state.draftOrder[state.turn];
     
@@ -138,29 +141,52 @@ document.addEventListener('DOMContentLoaded', async () => {
             const champion = team[role];
     
             if (champion) {
-                slot.innerHTML = `
-                    <img src="${DDRAGON_URL}${champion.id}.png" alt="${champion.nome}">
-                    <div class="champion-name">${champion.nome}</div>
-                `;
+                slot.innerHTML = `<img src="${DDRAGON_URL}${champion.id}.png" alt="${champion.nome}"><div class="champion-name">${champion.nome}</div>`;
                 slot.classList.add('filled');
                 slot.classList.remove('available');
+
             } else {
                 slot.innerHTML = `<span>${role}</span>`;
                 slot.classList.remove('filled');
-                // Adiciona a classe 'available' se for o turno do time, o jogador for desse time e um campeão estiver selecionado
                 const isAvailable = currentTurnColor === teamColor && myTeam === teamColor && selectedChampion;
                 slot.classList.toggle('available', isAvailable);
             }
         });
     }
 
-    initializeGame();
-});
+    // --- NOVA FUNÇÃO PARA MOSTRAR A TELA FINAL ---
+    function showEndScreen(state) {
+        draftContainer.style.display = 'none'; // Esconde a tela de draft
+        const winner = state.blueScore > state.redScore ? 'blue' : 'red';
+        const diff = Math.abs(state.blueScore - state.redScore);
 
-// Adiciona uma pequena lógica no servidor para responder ao pedido de estado
-// No server.js, adicione isso dentro do io.on('connection', ...):
-socket.on('get-game-state', (roomId) => {
-    if (gameRooms[roomId]) {
-        socket.emit('game-state-response', gameRooms[roomId]);
+        const myScore = myTeam === 'blue' ? state.blueScore : state.redScore;
+        const opponentScore = myTeam === 'blue' ? state.redScore : state.blueScore;
+        const opponentTeamColor = myTeam === 'blue' ? 'red' : 'blue';
+
+        // Configura o painel do jogador
+        myFinalScore.innerText = myScore;
+        if (myTeam === winner) {
+            resultTitle.innerText = "Vitória";
+            resultTitle.parentElement.className = 'result-panel victory';
+        } else {
+            resultTitle.innerText = "Derrota";
+            resultTitle.parentElement.className = 'result-panel defeat';
+        }
+
+        // Configura o painel do oponente
+        opponentFinalScore.innerText = opponentScore;
+        if (opponentTeamColor === winner) {
+            opponentResultTitle.innerText = "Vitória";
+            opponentResultTitle.parentElement.className = 'result-panel opponent victory';
+        } else {
+            opponentResultTitle.innerText = "Derrota";
+            opponentResultTitle.parentElement.className = 'result-panel opponent defeat';
+        }
+
+        scoreDifference.innerText = `Diferença de ${diff} pontos.`;
+        endScreen.classList.add('visible'); // Mostra a tela final
     }
+
+    initializeGame();
 });
