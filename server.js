@@ -34,8 +34,8 @@ io.on('connection', (socket) => {
                 red: socket.id
             },
             campeoes: [], // Precisamos carregar os campeões aqui
-            blueTeam: [],
-            redTeam: [],
+            blueTeam: { TOP: null, JG: null, MID: null, ADC: null, SUP: null },
+            redTeam: { TOP: null, JG: null, MID: null, ADC: null, SUP: null },
             blueScore: 0,
             redScore: 0,
             turn: 0,
@@ -69,36 +69,35 @@ io.on('connection', (socket) => {
 
     // Lógica para quando um jogador escolhe um campeão
     socket.on('champion-pick', (data) => {
-        const { roomId, champion } = data;
-        const room = gameRooms[roomId];
-        if (!room) return;
+    const { roomId, champion, role } = data; // Adicionamos 'role'
+    const room = gameRooms[roomId];
+    if (!room) return;
 
-        const playerTeamColor = room.players.blue === socket.id ? 'blue' : 'red';
-        const currentTurnColor = room.draftOrder[room.turn];
+    const playerTeamColor = room.players.blue === socket.id ? 'blue' : 'red';
+    const currentTurnColor = room.draftOrder[room.turn];
+    const currentTeam = playerTeamColor === 'blue' ? room.blueTeam : room.redTeam;
 
-        // Validação: É o turno deste jogador? O campeão já foi pego?
-        if (playerTeamColor === currentTurnColor && !room.pickedChampions.has(champion.id)) {
-            let alliedTeam = playerTeamColor === 'blue' ? room.blueTeam : room.redTeam;
-            let enemyTeam = playerTeamColor === 'blue' ? room.redTeam : room.blueTeam;
-            
-            // Reutiliza a função de pontuação (precisa ser definida no servidor)
-            const score = calculatePickScore(champion, alliedTeam, enemyTeam);
-            
-            if(playerTeamColor === 'blue') {
-                room.blueTeam.push(champion);
-                room.blueScore += score;
-            } else {
-                room.redTeam.push(champion);
-                room.redScore += score;
-            }
+    // Validação extra: a rota está disponível?
+    if (playerTeamColor === currentTurnColor && !room.pickedChampions.has(champion.id) && currentTeam[role] === null) {
+        const alliedTeam = Object.values(currentTeam).filter(c => c !== null); // Pega os campeões já escolhidos
+        const enemyTeam = Object.values(playerTeamColor === 'blue' ? room.redTeam : room.blueTeam).filter(c => c !== null);
 
-            room.pickedChampions.add(champion.id);
-            room.turn++;
+        const score = calculatePickScore(champion, alliedTeam, enemyTeam);
 
-            // Envia o estado atualizado para todos na sala
-            io.to(roomId).emit('game-update', room);
+        if(playerTeamColor === 'blue') {
+            room.blueTeam[role] = champion; // Coloca o campeão na rota certa
+            room.blueScore += score;
+        } else {
+            room.redTeam[role] = champion; // Coloca o campeão na rota certa
+            room.redScore += score;
         }
-    });
+
+        room.pickedChampions.add(champion.id);
+        room.turn++;
+
+        io.to(roomId).emit('game-update', room);
+    }
+});
 
     // Lógica para quando um jogador desconecta
     socket.on('disconnect', () => {

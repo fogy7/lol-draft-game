@@ -150,4 +150,21 @@ body {
     color: #010a13;
     cursor: pointer;
     font-weight: bold;
+}/* Estilos para a nova seleção de rota */
+
+.champion-icon.selected img {
+    border-color: #ffcf40;
+    box-shadow: 0 0 15px #ffcf40;
+}
+
+.pick-slot.available {
+    cursor: pointer;
+    background-color: rgba(200, 155, 60, 0.2);
+    border: 2px solid #c89b3c;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pick-slot.available:hover {
+    background-color: rgba(200, 155, 60, 0.4);
+    border-color: #ffcf40;
 }
