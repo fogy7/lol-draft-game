@@ -118,7 +118,7 @@ body {
     border: 2px solid #2c3c5c;
 }
 .team-panel {
-    width: 20%;
+    width: 25%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -134,7 +134,7 @@ body {
 .team-picks { width: 100%; }
 .pick-slot {
     width: 100%;
-    height: 80px;
+    height: 70px;
     background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid #1e283b;
     margin-bottom: 10px;
@@ -157,20 +157,19 @@ body {
 .pick-slot .champion-name { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; text-align: center; padding: 5px 0; font-size: 0.9em; transform: translateY(100%); transition: transform 0.3s; }
 
 .center-panel {
-    width: 60%;
+    width: 50%;
     padding: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 #turn-indicator { color: #f0e6d2; border-bottom: 2px solid #c89b3c; padding-bottom: 10px; }
-#champion-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 8px; overflow-y: auto; max-height: 80%; padding: 10px; background-color: #010a13; border: 1px solid #1e283b; flex-grow: 1; }
-.champion-icon { width: 70px; height: 70px; cursor: pointer; transition: transform 0.2s, filter 0.2s; position: relative; }
+#champion-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(65px, 1fr)); gap: 8px; overflow-y: auto; max-height: 80%; padding: 10px; background-color: #010a13; border: 1px solid #1e283b; flex-grow: 1; }
+.champion-icon { width: 65px; height: 65px; cursor: pointer; transition: transform 0.2s, filter 0.2s; position: relative; }
 .champion-icon img { width: 100%; height: 100%; border: 2px solid #c89b3c; }
 .champion-icon:hover { transform: scale(1.1); }
 .champion-icon.picked { filter: grayscale(100%); cursor: not-allowed; pointer-events: none; }
 .champion-icon.selected img { border-color: #ffcf40; box-shadow: 0 0 15px #ffcf40; }
-
 .pick-slot.available {
     cursor: pointer;
     background-color: rgba(200, 155, 60, 0.2);
@@ -182,13 +181,15 @@ body {
 /* --- ESTILOS DA FASE DE BANIMENTO --- */
 .team-bans {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 20px;
 }
 .ban-slot {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #1e283b;
     position: relative;
@@ -223,15 +224,12 @@ body {
 .result-panel { text-align: center; padding: 40px; width: 400px; border-style: solid; border-width: 4px; text-transform: uppercase; }
 .result-panel h1 { font-size: 5em; margin: 0; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); }
 .result-panel p { font-size: 1.5em; margin-top: 10px; }
-
 .victory { border-color: #c89b3c; background: linear-gradient(to top, #0a323c, #0a1428); }
 .victory h1 { color: #0ac; }
 .victory p { color: #c4b998; }
-
 .defeat { border-color: #5c3c3c; background: linear-gradient(to top, #3c0a0a, #1e0a0a); }
 .defeat h1 { color: #f44336; }
 .defeat p { color: #a0946c; }
-
 .opponent { opacity: 0.7; }
 .match-summary { margin: 20px 0; text-align: center; }
 #play-again-button { margin-top: 20px; padding: 15px 30px; font-size: 1.2em; background-color: #0ac; border: 2px solid #0ac; color: #010a13; cursor: pointer; font-weight: bold; text-transform: uppercase; transition: background-color 0.3s, color 0.3s; }

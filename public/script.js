@@ -1,26 +1,19 @@
-// public/script.js - VERSÃO DE DIAGNÓSTICO COMPLETA
+// public/script.js - VERSÃO COM DRAFT PROFISSIONAL
 
 document.addEventListener('DOMContentLoaded', () => {
     const socket = io();
 
-    // Telas
     const screens = { lobby: document.getElementById('lobby-screen'), draft: document.getElementById('draft-screen'), end: document.getElementById('end-screen') };
-
-    // Elementos do Lobby
     const roomNameInput = document.getElementById('room-name-input');
     const sideButtons = document.querySelectorAll('.side-button');
     const createRoomButton = document.getElementById('create-room-button');
     const roomList = document.getElementById('room-list');
-    
-    // Elementos do Draft
     const championGrid = document.getElementById('champion-grid');
     const turnIndicator = document.getElementById('turn-indicator');
     const blueTeamPicksContainer = document.getElementById('blue-team-picks');
     const redTeamPicksContainer = document.getElementById('red-team-picks');
     const blueTeamBansContainer = document.getElementById('blue-team-bans');
     const redTeamBansContainer = document.getElementById('red-team-bans');
-
-    // Elementos da Tela Final
     const resultTitle = document.getElementById('result-title');
     const myFinalScore = document.getElementById('my-final-score');
     const opponentResultTitle = document.getElementById('opponent-result-title');
@@ -28,13 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDifference = document.getElementById('score-difference');
     const playAgainButton = document.getElementById('play-again-button');
 
-    // Estado do Cliente
     let selectedSide, mySide, roomId, selectedChampion = null;
     let currentGameState = null;
     let allChampions = [];
     let DDRAGON_URL = '';
 
-    // --- LÓGICA DO LOBBY ---
+    const DRAFT_ORDER = [
+        { type: 'ban', team: 'blue' }, { type: 'ban', team: 'red' }, { type: 'ban', team: 'blue' },
+        { type: 'ban', team: 'red' }, { type: 'ban', team: 'blue' }, { type: 'ban', team: 'red' },
+        { type: 'pick', team: 'blue' }, { type: 'pick', team: 'red' }, { type: 'pick', team: 'red' },
+        { type: 'pick', team: 'blue' }, { type: 'pick', team: 'blue' }, { type: 'pick', team: 'red' },
+        { type: 'ban', team: 'red' }, { type: 'ban', team: 'blue' }, { type: 'ban', team: 'red' },
+        { type: 'ban', team: 'blue' },
+        { type: 'pick', team: 'red' }, { type: 'pick', team: 'blue' }, { type: 'pick', team: 'blue' },
+        { type: 'pick', team: 'red' }
+    ];
 
     sideButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -78,69 +79,31 @@ document.addEventListener('DOMContentLoaded', () => {
         screens[screenId].classList.add('visible');
     }
 
-    // --- LÓGICA DO DRAFT E BAN ---
-
     function handleChampionClick(champion, element) {
-        if (!currentGameState || !roomId) return;
-        const { phase, banOrder, pickOrder, turn } = currentGameState;
-        
-        if (phase === 'banning') {
-            const currentTurnColor = banOrder[turn];
-            if (mySide === currentTurnColor) {
-                socket.emit('champion-ban', { roomId, champion });
+        if (!currentGameState || !roomId || currentGameState.turn >= DRAFT_ORDER.length) return;
+        const currentAction = DRAFT_ORDER[currentGameState.turn];
+        if (mySide !== currentAction.team) return;
+        if (currentAction.type === 'ban') {
+            socket.emit('champion-ban', { roomId, champion });
+        } else if (currentAction.type === 'pick') {
+            if (selectedChampion) {
+                document.querySelector('.champion-icon.selected')?.classList.remove('selected');
             }
-        } else if (phase === 'picking') {
-            const currentTurnColor = pickOrder[turn];
-            if (mySide === currentTurnColor) {
-                if (selectedChampion) {
-                    document.querySelector('.champion-icon.selected')?.classList.remove('selected');
-                }
-                selectedChampion = champion;
-                element.classList.add('selected');
-                updateDraftUI({ gameState: currentGameState });
-            }
+            selectedChampion = champion;
+            element.classList.add('selected');
+            updateDraftUI({ gameState: currentGameState });
         }
     }
 
     function handleSlotClick(role, teamColor) {
-        console.log(`--- Tentativa de Pick na Rota: ${role.toUpperCase()} ---`);
-        
-        if (!selectedChampion) {
-            console.log("Validação Falhou: Nenhum campeão selecionado.");
-            return;
-        }
-        console.log("1. Campeão selecionado:", selectedChampion.nome);
-
-        if (teamColor !== mySide) {
-            console.log(`Validação Falhou: Tentou clicar no time errado. Cor do slot: ${teamColor}, Meu time: ${mySide}`);
-            return;
-        }
-        console.log("2. Clicou no painel do time correto.");
-
-        if (!currentGameState || currentGameState.phase !== 'picking') {
-            console.log(`Validação Falhou: Não está na fase de pick. Fase atual: ${currentGameState?.phase}`);
-            return;
-        }
-        console.log("3. Está na fase de 'picking'.");
-
-        const currentTurnColor = currentGameState.pickOrder[currentGameState.turn];
-        if (mySide !== currentTurnColor) {
-            console.log(`Validação Falhou: Não é o seu turno. É a vez do time: ${currentTurnColor}`);
-            return;
-        }
-        console.log("4. É o seu turno de escolher.");
-
+        if (!selectedChampion || !currentGameState || currentGameState.turn >= DRAFT_ORDER.length) return;
+        const currentAction = DRAFT_ORDER[currentGameState.turn];
+        if (currentAction.type !== 'pick' || mySide !== teamColor) return;
         const myTeamData = mySide === 'blue' ? currentGameState.blueTeam : currentGameState.redTeam;
-        if (myTeamData[role] !== null) {
-            console.log(`Validação Falhou: A rota ${role.toUpperCase()} já está ocupada.`);
-            return;
+        if (mySide === currentAction.team && myTeamData[role] === null) {
+            socket.emit('champion-pick', { roomId, champion: selectedChampion, role });
         }
-        console.log("5. A rota está livre.");
-        console.log("✅ TODAS AS VALIDAÇÕES PASSARAM! Enviando pick para o servidor...");
-        socket.emit('champion-pick', { roomId, champion: selectedChampion, role });
     }
-    
-    // --- LÓGICA DA TELA FINAL ---
 
     playAgainButton.addEventListener('click', () => socket.emit('reset-game', roomId));
 
@@ -159,33 +122,29 @@ document.addEventListener('DOMContentLoaded', () => {
         scoreDifference.innerText = `Diferença de ${diff} pontos.`;
     }
 
-    // --- ATUALIZAÇÃO DA INTERFACE (UI) ---
-
     function updateDraftUI(room) {
         currentGameState = room.gameState;
         if (!currentGameState) return;
-        const { phase, turn, banOrder, pickOrder, blueBans, redBans, blueTeam, redTeam, pickedOrBannedChampions } = currentGameState;
+        const { turn, blueBans, redBans, blueTeam, redTeam, bannedOrPickedChampions } = currentGameState;
 
-        if (phase === 'banning' && turn < banOrder.length) {
-            const currentTurnColor = banOrder[turn];
-            turnIndicator.innerText = `Time ${currentTurnColor === 'blue' ? 'Azul' : 'Vermelho'} bane`;
-            turnIndicator.style.color = currentTurnColor === 'blue' ? '#59bfff' : '#ff5959';
-        } else if (phase === 'picking' && turn < pickOrder.length) {
-            const currentTurnColor = pickOrder[turn];
-            turnIndicator.innerText = `Vez do Time ${currentTurnColor === 'blue' ? 'Azul' : 'Vermelho'}`;
-            turnIndicator.style.color = currentTurnColor === 'blue' ? '#59bfff' : '#ff5959';
-        } else if (phase === 'picking' && turn >= pickOrder.length) {
+        if (turn >= DRAFT_ORDER.length) {
             showEndScreen(currentGameState);
             return;
         }
+
+        const currentAction = DRAFT_ORDER[turn];
+        const teamText = currentAction.team === 'blue' ? 'Azul' : 'Vermelho';
+        const actionText = currentAction.type === 'ban' ? 'bane' : 'escolhe';
+        turnIndicator.innerText = `Time ${teamText} ${actionText}`;
+        turnIndicator.style.color = currentAction.team === 'blue' ? '#59bfff' : '#ff5959';
         
         updateBanSlots(blueTeamBansContainer, blueBans);
         updateBanSlots(redTeamBansContainer, redBans);
 
-        updateTeamPicks(blueTeamPicksContainer, blueTeam, 'blue', phase === 'picking' ? pickOrder[turn] : null);
-        updateTeamPicks(redTeamPicksContainer, redTeam, 'red', phase === 'picking' ? pickOrder[turn] : null);
+        updateTeamPicks(blueTeamPicksContainer, blueTeam, 'blue', currentAction);
+        updateTeamPicks(redTeamPicksContainer, redTeam, 'red', currentAction);
 
-        const usedIds = new Set((pickedOrBannedChampions || []).map(c => c.id));
+        const usedIds = new Set((bannedOrPickedChampions || []).map(c => c.id));
         document.querySelectorAll('.champion-icon').forEach(icon => {
             icon.classList.toggle('picked', usedIds.has(icon.dataset.id));
             if (!selectedChampion || icon.dataset.id !== selectedChampion.id) {
@@ -193,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        if (turn >= pickOrder.length) {
+        if (currentAction.type === 'ban') {
             selectedChampion = null;
         }
     }
@@ -212,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function updateTeamPicks(container, teamData, teamColor, currentTurnColor) {
+    function updateTeamPicks(container, teamData, teamColor, currentAction) {
         Object.keys(teamData).forEach(role => {
             const slot = container.querySelector(`.pick-slot[data-role="${role.toUpperCase()}"]`);
             if (!slot) return;
@@ -224,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 slot.innerHTML = `<span>${role.toUpperCase()}</span>`;
                 slot.classList.remove('filled');
-                const isAvailable = currentTurnColor === teamColor && mySide === teamColor && selectedChampion;
+                const isAvailable = currentAction.type === 'pick' && currentAction.team === teamColor && mySide === teamColor && selectedChampion;
                 slot.classList.toggle('available', isAvailable);
             }
         });
@@ -273,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateDraftUI(room);
         });
         socket.on('game-update', (room) => {
-            if (room.gameState.turn === 0 && room.gameState.phase === 'banning') {
+            if (room.gameState.turn === 0) {
                 showScreen('draft');
             }
             updateDraftUI(room);
