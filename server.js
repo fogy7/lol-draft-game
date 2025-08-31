@@ -153,23 +153,40 @@ io.on('connection', (socket) => {
 // --- FUNÇÃO PARA LIMPAR SALAS INATIVAS ---
 async function cleanupInactiveRooms() {
     console.log("Executando limpeza de salas inativas...");
-    const roomsJSON = await pubClient.hGetAll(ROOMS_KEY);
-    let roomsDeleted = 0;
+    try {
+        const roomsJSON = await pubClient.hGetAll(ROOMS_KEY);
+        let roomsDeleted = 0;
 
-    for (const roomId in roomsJSON) {
-        const room = JSON.parse(roomsJSON[roomId]);
-        const playerCount = Object.keys(room.players).length;
-        const age = Date.now() - room.createdAt;
+        // roomsJSON é um objeto { roomId: jsonString, ... }
+        for (const [fieldId, roomStr] of Object.entries(roomsJSON)) {
+            if (!roomStr) continue;
+            let room;
+            try {
+                room = JSON.parse(roomStr);
+            } catch (err) {
+                console.warn(`Falha ao parsear sala ${fieldId}:`, err);
+                continue;
+            }
 
-        if (playerCount < 2 && age > ROOM_EXPIRATION_MS) {
-            await pubClient.hDel(ROOMS_KEY, room.id);
-            roomsDeleted++;
-            console.log(`Sala inativa "${room.name}" (${room.id}) removida.`);
+            const playerCount = room.players ? Object.keys(room.players).length : 0;
+            const age = Date.now() - (room.createdAt || 0);
+
+            // remove se foi criada há mais de ROOM_EXPIRATION_MS (independente de playerCount)
+            if (age > ROOM_EXPIRATION_MS) {
+                await pubClient.hDel(ROOMS_KEY, fieldId);
+                roomsDeleted++;
+                console.log(`Sala expirada removida: "${room.name}" (${fieldId}), criada há ${Math.round(age/1000)}s, players=${playerCount}`);
+            }
         }
-    }
 
-    if (roomsDeleted > 0) {
-        broadcastRoomList();
+        if (roomsDeleted > 0) {
+            console.log(`Limpeza completa: ${roomsDeleted} sala(s) removida(s).`);
+            broadcastRoomList();
+        } else {
+            console.log("Limpeza completa: nenhuma sala removida.");
+        }
+    } catch (err) {
+        console.error("Erro durante cleanupInactiveRooms:", err);
     }
 }
 
