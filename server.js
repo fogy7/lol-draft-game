@@ -1,4 +1,4 @@
-// server.js - VERSÃO FINAL COM EXPIRAÇÃO DE SALAS
+// server.js - VERSÃO FINAL COM BANIMENTO E LÓGICA DE JOGO COMPLETA
 
 const express = require('express');
 const http = require('http');
@@ -33,6 +33,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 const ROOMS_KEY = 'lol_draft_rooms';
 const GAME_PREFIX = 'game:';
 const ROOM_EXPIRATION_MS = 10 * 60 * 1000; // 10 minutos
+
+// Função para criar o estado inicial do jogo
+function createInitialGameState() {
+    return {
+        phase: 'banning', // Começa na fase de banimento
+        turn: 0,
+        banOrder: ['blue', 'red', 'blue', 'red', 'blue', 'red'],
+        pickOrder: ['blue', 'red', 'red', 'blue', 'blue', 'red', 'red', 'blue', 'blue', 'red'],
+        blueBans: [],
+        redBans: [],
+        blueTeam: { TOP: null, JG: null, MID: null, ADC: null, SUP: null },
+        redTeam: { TOP: null, JG: null, MID: null, ADC: null, SUP: null },
+        blueScore: 0,
+        redScore: 0,
+        pickedOrBannedChampions: [],
+    };
+}
 
 async function broadcastRoomList() {
     try {
@@ -75,41 +92,63 @@ io.on('connection', (socket) => {
         
         if (Object.keys(room.players).length === 2) {
             await pubClient.hDel(ROOMS_KEY, roomId);
-            
-            room.gameState = {
-                blueTeam: { TOP: null, JG: null, MID: null, ADC: null, SUP: null },
-                redTeam: { TOP: null, JG: null, MID: null, ADC: null, SUP: null },
-                blueScore: 0, redScore: 0, turn: 0,
-                pickedChampions: [],
-                draftOrder: ['blue', 'red', 'red', 'blue', 'blue', 'red', 'red', 'blue', 'blue', 'red']
-            };
-            
+            room.gameState = createInitialGameState();
             await pubClient.set(`${GAME_PREFIX}${roomId}`, JSON.stringify(room));
             socket.join(roomId);
             io.to(roomId).emit('game-start', room);
+            broadcastRoomList();
+        } else {
+            await pubClient.hSet(ROOMS_KEY, roomId, JSON.stringify(room));
+            socket.join(roomId);
+            broadcastRoomList();
         }
-        broadcastRoomList();
+    });
+
+    socket.on('champion-ban', async ({ roomId, champion }) => {
+        const gameJSON = await pubClient.get(`${GAME_PREFIX}${roomId}`);
+        if (!gameJSON) return;
+        const room = JSON.parse(gameJSON);
+        const { gameState } = room;
+
+        const playerSide = room.players[socket.id]?.side;
+        if (!playerSide || gameState.phase !== 'banning') return;
+
+        const currentTurnColor = gameState.banOrder[gameState.turn];
+        const isAlreadyUsed = gameState.pickedOrBannedChampions.some(c => c.id === champion.id);
+
+        if (playerSide === currentTurnColor && !isAlreadyUsed) {
+            if (playerSide === 'blue') gameState.blueBans.push(champion);
+            else gameState.redBans.push(champion);
+            
+            gameState.pickedOrBannedChampions.push(champion);
+            gameState.turn++;
+
+            if (gameState.turn >= gameState.banOrder.length) {
+                gameState.phase = 'picking';
+                gameState.turn = 0;
+            }
+
+            await pubClient.set(`${GAME_PREFIX}${roomId}`, JSON.stringify(room));
+            io.to(roomId).emit('game-update', room);
+        }
     });
 
     socket.on('champion-pick', async ({ roomId, champion, role }) => {
         const gameJSON = await pubClient.get(`${GAME_PREFIX}${roomId}`);
         if (!gameJSON) return;
         const room = JSON.parse(gameJSON);
+        const { gameState } = room;
 
         const playerSide = room.players[socket.id]?.side;
-        if (!playerSide) return;
+        if (!playerSide || gameState.phase !== 'picking') return;
 
-        const { gameState } = room;
-        const currentTurnColor = gameState.draftOrder[gameState.turn];
+        const currentTurnColor = gameState.pickOrder[gameState.turn];
         const currentTeam = playerSide === 'blue' ? gameState.blueTeam : gameState.redTeam;
-        
-        const isPicked = gameState.pickedChampions.some(c => c.id === champion.id);
+        const isAlreadyUsed = gameState.pickedOrBannedChampions.some(c => c.id === champion.id);
 
-        if (playerSide === currentTurnColor && !isPicked && currentTeam[role] === null) {
+        if (playerSide === currentTurnColor && !isAlreadyUsed && currentTeam[role] === null) {
             const alliedTeam = Object.values(currentTeam).filter(c => c !== null);
-            const enemyTeam = Object.values(playerSide === 'blue' ? gameState.redTeam : gameState.blueTeam).filter(c => c !== null);
-            
-            const score = calculatePickScore(champion, alliedTeam, enemyTeam);
+            const score = calculatePickScore(champion, alliedTeam);
             
             if(playerSide === 'blue') {
                 gameState.blueTeam[role] = champion;
@@ -119,7 +158,7 @@ io.on('connection', (socket) => {
                 gameState.redScore += score;
             }
 
-            gameState.pickedChampions.push(champion);
+            gameState.pickedOrBannedChampions.push(champion);
             gameState.turn++;
 
             await pubClient.set(`${GAME_PREFIX}${roomId}`, JSON.stringify(room));
@@ -131,33 +170,24 @@ io.on('connection', (socket) => {
         const gameJSON = await pubClient.get(`${GAME_PREFIX}${roomId}`);
         if (!gameJSON) return;
         const room = JSON.parse(gameJSON);
-
-        room.gameState = {
-            blueTeam: { TOP: null, JG: null, MID: null, ADC: null, SUP: null },
-            redTeam: { TOP: null, JG: null, MID: null, ADC: null, SUP: null },
-            blueScore: 0, redScore: 0, turn: 0,
-            pickedChampions: [],
-            draftOrder: ['blue', 'red', 'red', 'blue', 'blue', 'red', 'red', 'blue', 'blue', 'red']
-        };
-
+        room.gameState = createInitialGameState();
         await pubClient.set(`${GAME_PREFIX}${roomId}`, JSON.stringify(room));
         io.to(roomId).emit('game-update', room);
     });
-    
+
     socket.on('disconnect', () => {
         console.log('Jogador desconectado:', socket.id);
         // Lógica de desconexão para limpar salas pode ser adicionada aqui
     });
 });
 
-// --- FUNÇÃO PARA LIMPAR SALAS INATIVAS ---
+// INCORPORANDO A SUA FUNÇÃO MELHORADA DE LIMPEZA
 async function cleanupInactiveRooms() {
     console.log("Executando limpeza de salas inativas...");
     try {
         const roomsJSON = await pubClient.hGetAll(ROOMS_KEY);
         let roomsDeleted = 0;
 
-        // roomsJSON é um objeto { roomId: jsonString, ... }
         for (const [fieldId, roomStr] of Object.entries(roomsJSON)) {
             if (!roomStr) continue;
             let room;
@@ -171,7 +201,6 @@ async function cleanupInactiveRooms() {
             const playerCount = room.players ? Object.keys(room.players).length : 0;
             const age = Date.now() - (room.createdAt || 0);
 
-            // remove se foi criada há mais de ROOM_EXPIRATION_MS (independente de playerCount)
             if (age > ROOM_EXPIRATION_MS) {
                 await pubClient.hDel(ROOMS_KEY, fieldId);
                 roomsDeleted++;
@@ -190,12 +219,10 @@ async function cleanupInactiveRooms() {
     }
 }
 
-// Executa a limpeza a cada minuto
-setInterval(cleanupInactiveRooms, 60000);
+setInterval(cleanupInactiveRooms, 60000); // Executa a cada minuto
 
-function calculatePickScore(champion, alliedTeam, enemyTeam) {
+function calculatePickScore(champion, alliedTeam) {
     let score = 100;
-    // Adicione aqui a sua lógica de pontuação completa...
     const adCount = alliedTeam.filter(c => c.tipo_dano === 'AD' || c.tipo_dano === 'Híbrido').length;
     if (champion.tipo_dano === 'AD' && adCount >= 2) score -= 20;
     const apCount = alliedTeam.filter(c => c.tipo_dano === 'AP' || c.tipo_dano === 'Híbrido').length;
