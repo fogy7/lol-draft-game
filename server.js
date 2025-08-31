@@ -1,4 +1,4 @@
-// server.js - VERSÃO FINAL COM BANIMENTO E LÓGICA DE JOGO COMPLETA
+// server.js - VERSÃO FINAL COMPLETA COM BANIMENTO E CORREÇÃO DE PICK
 
 const express = require('express');
 const http = require('http');
@@ -37,7 +37,7 @@ const ROOM_EXPIRATION_MS = 10 * 60 * 1000; // 10 minutos
 // Função para criar o estado inicial do jogo
 function createInitialGameState() {
     return {
-        phase: 'banning', // Começa na fase de banimento
+        phase: 'banning',
         turn: 0,
         banOrder: ['blue', 'red', 'blue', 'red', 'blue', 'red'],
         pickOrder: ['blue', 'red', 'red', 'blue', 'blue', 'red', 'red', 'blue', 'blue', 'red'],
@@ -148,7 +148,8 @@ io.on('connection', (socket) => {
 
         if (playerSide === currentTurnColor && !isAlreadyUsed && currentTeam[role] === null) {
             const alliedTeam = Object.values(currentTeam).filter(c => c !== null);
-            const score = calculatePickScore(champion, alliedTeam);
+            const enemyTeam = Object.values(playerSide === 'blue' ? gameState.redTeam : gameState.blueTeam).filter(c => c !== null);
+            const score = calculatePickScore(champion, alliedTeam, enemyTeam);
             
             if(playerSide === 'blue') {
                 gameState.blueTeam[role] = champion;
@@ -174,14 +175,13 @@ io.on('connection', (socket) => {
         await pubClient.set(`${GAME_PREFIX}${roomId}`, JSON.stringify(room));
         io.to(roomId).emit('game-update', room);
     });
-
+    
     socket.on('disconnect', () => {
         console.log('Jogador desconectado:', socket.id);
         // Lógica de desconexão para limpar salas pode ser adicionada aqui
     });
 });
 
-// INCORPORANDO A SUA FUNÇÃO MELHORADA DE LIMPEZA
 async function cleanupInactiveRooms() {
     console.log("Executando limpeza de salas inativas...");
     try {
@@ -219,16 +219,37 @@ async function cleanupInactiveRooms() {
     }
 }
 
-setInterval(cleanupInactiveRooms, 60000); // Executa a cada minuto
+setInterval(cleanupInactiveRooms, 60000);
 
-function calculatePickScore(champion, alliedTeam) {
+function calculatePickScore(champion, alliedTeam, enemyTeam) {
     let score = 100;
+    
     const adCount = alliedTeam.filter(c => c.tipo_dano === 'AD' || c.tipo_dano === 'Híbrido').length;
     if (champion.tipo_dano === 'AD' && adCount >= 2) score -= 20;
     const apCount = alliedTeam.filter(c => c.tipo_dano === 'AP' || c.tipo_dano === 'Híbrido').length;
     if (champion.tipo_dano === 'AP' && apCount >= 2) score -= 20;
+
     const teamHasHighCC = alliedTeam.some(c => c.nivel_cc === 'Alto');
     if (champion.nivel_cc === 'Alto' && !teamHasHighCC) score += 30;
+
+    for (const ally of alliedTeam) {
+        if (ally.sinergias_fortes_com && ally.sinergias_fortes_com.includes(champion.nome)) {
+            score += 25;
+        }
+        if (champion.sinergias_fortes_com && champion.sinergias_fortes_com.includes(ally.nome)) {
+            score += 25;
+        }
+    }
+
+    for (const enemy of enemyTeam) {
+        if (champion.fraco_contra && champion.fraco_contra.includes(enemy.nome)) {
+            score -= 15;
+        }
+        if (enemy.fraco_contra && enemy.fraco_contra.includes(champion.nome)) {
+            score += 20;
+        }
+    }
+
     return Math.round(score);
 }
 
