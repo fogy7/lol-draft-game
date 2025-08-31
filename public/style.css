@@ -269,3 +269,97 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/* --- GERENCIAMENTO DE TELAS --- */
+.screen {
+    display: none; /* Todas as telas começam ocultas */
+    width: 100%;
+    height: 100%;
+}
+.screen.visible {
+    display: flex; /* A tela ativa fica visível */
+}
+
+/* --- ESTILOS DO LOBBY --- */
+#lobby-screen {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.lobby-container {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+.create-room-panel, .room-list-panel {
+    background-color: #0a1428;
+    border: 1px solid #2c3c5c;
+    padding: 20px;
+    flex: 1;
+}
+#room-name-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #010a13;
+    border: 1px solid #2c3c5c;
+    color: #c4b998;
+}
+.side-selection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.side-button {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid grey;
+    background-color: transparent;
+    color: grey;
+    cursor: pointer;
+}
+.side-button.blue { border-color: #0ac; color: #0ac; }
+.side-button.red { border-color: #f44336; color: #f44336; }
+.side-button.selected {
+    background-color: #c89b3c;
+    color: #010a13;
+}
+#create-room-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0ac;
+    color: #010a13;
+    border: none;
+    cursor: pointer;
+}
+#create-room-button:disabled {
+    background-color: #5b5a56;
+    cursor: not-allowed;
+}
+#room-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.room-item {
+    background-color: #010a13;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #c89b3c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.join-button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.join-button.blue { background-color: #0ac; color: #010a13; border: none; }
+.join-button.red { background-color: #f44336; color: #fff; border: none; }
+.join-button:disabled { background-color: #5b5a56; }
+
+/* Adiciona clareza visual no draft */
+#my-team-panel {
+    border: 3px solid #c89b3c !important;
+}

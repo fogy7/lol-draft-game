@@ -7,56 +7,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="draft-container">
-        <div class="team-panel blue-team">
-            <h2>Time Azul <span id="blue-score">0</span></h2>
-            <div class="team-picks" id="blue-team-picks">
-                <div class="pick-slot" data-role="TOP"><span>TOP</span></div>
-                <div class="pick-slot" data-role="JG"><span>JG</span></div>
-                <div class="pick-slot" data-role="MID"><span>MID</span></div>
-                <div class="pick-slot" data-role="ADC"><span>ADC</span></div>
-                <div class="pick-slot" data-role="SUP"><span>SUP</span></div>
-            </div>
-        </div>
-
-        <div class="center-panel">
-            <h1 id="turn-indicator">Vez do Time Azul</h1>
-            <p id="pick-info"></p>
-            <div id="champion-grid">
+    <div id="lobby-screen" class="screen visible">
+        <h1>Bem-vindo ao Draft Game</h1>
+        <div class="lobby-container">
+            <div class="create-room-panel">
+                <h2>Criar uma Sala</h2>
+                <input type="text" id="room-name-input" placeholder="Nome da Sala" maxlength="20">
+                <div class="side-selection">
+                    <button class="side-button blue" data-side="blue">Lado Azul</button>
+                    <button class="side-button red" data-side="red">Lado Vermelho</button>
                 </div>
-            <button id="reset-button" style="display: none;">Jogar Novamente</button>
-        </div>
-
-        <div class="team-panel red-team">
-            <h2>Time Vermelho <span id="red-score">0</span></h2>
-            <div class="team-picks" id="red-team-picks">
-                <div class="pick-slot" data-role="TOP"><span>TOP</span></div>
-                <div class="pick-slot" data-role="JG"><span>JG</span></div>
-                <div class="pick-slot" data-role="MID"><span>MID</span></div>
-                <div class="pick-slot" data-role="ADC"><span>ADC</span></div>
-                <div class="pick-slot" data-role="SUP"><span>SUP</span></div>
+                <button id="create-room-button" disabled>Criar Sala</button>
+            </div>
+            <div class="room-list-panel">
+                <h2>Salas Abertas</h2>
+                <div id="room-list">
+                    </div>
             </div>
         </div>
     </div>
+
+    <div id="draft-screen" class="screen">
+        <div class="draft-container">
+            <div class="team-panel blue-team" id="my-team-panel">
+                <h2 id="my-team-header">Seu Time</h2>
+                <div class="team-picks" id="my-team-picks">
+                    <div class="pick-slot" data-role="TOP"><span>TOP</span></div>
+                    <div class="pick-slot" data-role="JG"><span>JG</span></div>
+                    <div class="pick-slot" data-role="MID"><span>MID</span></div>
+                    <div class="pick-slot" data-role="ADC"><span>ADC</span></div>
+                    <div class="pick-slot" data-role="SUP"><span>SUP</span></div>
+                </div>
+            </div>
+            <div class="center-panel">
+                <h1 id="turn-indicator">Aguardando Oponente...</h1>
+                <div id="champion-grid"></div>
+            </div>
+            <div class="team-panel red-team" id="opponent-team-panel">
+                <h2 id="opponent-team-header">Time Oponente</h2>
+                <div class="team-picks" id="opponent-team-picks">
+                    <div class="pick-slot" data-role="TOP"><span>TOP</span></div>
+                    <div class="pick-slot" data-role="JG"><span>JG</span></div>
+                    <div class="pick-slot" data-role="MID"><span>MID</span></div>
+                    <div class="pick-slot" data-role="ADC"><span>ADC</span></div>
+                    <div class="pick-slot" data-role="SUP"><span>SUP</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="end-screen" class="screen end-screen-container">
+        </div>
+
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
-<script src="script.js"></script>
-
-    <div id="end-screen" class="end-screen-container">
-        <div class="result-panel" id="my-result">
-            <h1 id="result-title"></h1>
-            <p>Pontuação Final: <span id="my-final-score"></span></p>
-        </div>
-        <div class="match-summary">
-            <p id="score-difference"></p>
-            <button id="play-again-button">Jogar Novamente</button>
-        </div>
-        <div class="result-panel opponent" id="opponent-result">
-            <h1 id="opponent-result-title"></h1>
-            <p>Pontuação Final: <span id="opponent-final-score"></span></p>
-        </div>
-    </div>
-</body>
-</html>
 </body>
 </html>
