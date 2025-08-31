@@ -1,4 +1,4 @@
-// server.js - VERSÃO FINAL COM LOBBY E LÓGICA DE JOGO
+// server.js - VERSÃO FINAL COM EXPIRAÇÃO DE SALAS
 
 const express = require('express');
 const http = require('http');
@@ -32,11 +32,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const ROOMS_KEY = 'lol_draft_rooms';
 const GAME_PREFIX = 'game:';
+const ROOM_EXPIRATION_MS = 10 * 60 * 1000; // 10 minutos
 
 async function broadcastRoomList() {
-    const roomsJSON = await pubClient.hGetAll(ROOMS_KEY);
-    const rooms = Object.values(roomsJSON).map(JSON.parse).filter(room => room.players && (!room.players.blue || !room.players.red));
-    io.emit('room-list-update', rooms);
+    try {
+        const roomsJSON = await pubClient.hGetAll(ROOMS_KEY);
+        const rooms = Object.values(roomsJSON).map(JSON.parse);
+        io.emit('room-list-update', rooms);
+    } catch (err) {
+        console.error("Erro ao transmitir lista de salas:", err);
+    }
 }
 
 io.on('connection', (socket) => {
@@ -50,6 +55,7 @@ io.on('connection', (socket) => {
             id: roomId,
             name: roomName,
             players: { [socket.id]: { side } },
+            createdAt: Date.now()
         };
         await pubClient.hSet(ROOMS_KEY, roomId, JSON.stringify(room));
         socket.join(roomId);
@@ -67,7 +73,7 @@ io.on('connection', (socket) => {
 
         room.players[socket.id] = { side };
         
-        if (playerIds.length === 1) { // Agora a sala está cheia
+        if (Object.keys(room.players).length === 2) {
             await pubClient.hDel(ROOMS_KEY, roomId);
             
             room.gameState = {
@@ -137,22 +143,42 @@ io.on('connection', (socket) => {
         await pubClient.set(`${GAME_PREFIX}${roomId}`, JSON.stringify(room));
         io.to(roomId).emit('game-update', room);
     });
-
-    socket.on('get-game-state', async (roomId) => {
-        const gameJSON = await pubClient.get(`${GAME_PREFIX}${roomId}`);
-        if (gameJSON) {
-            socket.emit('game-state-response', JSON.parse(gameJSON));
-        }
-    });
-
+    
     socket.on('disconnect', () => {
         console.log('Jogador desconectado:', socket.id);
         // Lógica de desconexão para limpar salas pode ser adicionada aqui
     });
 });
 
+// --- FUNÇÃO PARA LIMPAR SALAS INATIVAS ---
+async function cleanupInactiveRooms() {
+    console.log("Executando limpeza de salas inativas...");
+    const roomsJSON = await pubClient.hGetAll(ROOMS_KEY);
+    let roomsDeleted = 0;
+
+    for (const roomId in roomsJSON) {
+        const room = JSON.parse(roomsJSON[roomId]);
+        const playerCount = Object.keys(room.players).length;
+        const age = Date.now() - room.createdAt;
+
+        if (playerCount < 2 && age > ROOM_EXPIRATION_MS) {
+            await pubClient.hDel(ROOMS_KEY, room.id);
+            roomsDeleted++;
+            console.log(`Sala inativa "${room.name}" (${room.id}) removida.`);
+        }
+    }
+
+    if (roomsDeleted > 0) {
+        broadcastRoomList();
+    }
+}
+
+// Executa a limpeza a cada minuto
+setInterval(cleanupInactiveRooms, 60000);
+
 function calculatePickScore(champion, alliedTeam, enemyTeam) {
     let score = 100;
+    // Adicione aqui a sua lógica de pontuação completa...
     const adCount = alliedTeam.filter(c => c.tipo_dano === 'AD' || c.tipo_dano === 'Híbrido').length;
     if (champion.tipo_dano === 'AD' && adCount >= 2) score -= 20;
     const apCount = alliedTeam.filter(c => c.tipo_dano === 'AP' || c.tipo_dano === 'Híbrido').length;

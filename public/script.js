@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allChampions = [];
     let DDRAGON_URL = '';
     let selectedChampion = null;
+    let currentGameState = null; // Guarda o estado atual do jogo localmente
 
     // --- LÓGICA DO LOBBY ---
 
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     roomNameInput.addEventListener('input', validateCreation);
+
     createRoomButton.addEventListener('click', () => {
         socket.emit('create-room', { roomName: roomNameInput.value.trim(), side: selectedSide });
     });
@@ -97,19 +99,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         selectedChampion = champion;
         element.classList.add('selected');
-        socket.emit('get-game-state', roomId);
+        
+        // Atualiza a UI localmente para destacar os slots disponíveis sem chamar o servidor
+        if (currentGameState) {
+            const currentTurnColor = currentGameState.draftOrder[currentGameState.turn];
+            updateTeamPicks(blueTeamPicksContainer, currentGameState.blueTeam, 'blue', currentTurnColor);
+            updateTeamPicks(redTeamPicksContainer, currentGameState.redTeam, 'red', currentTurnColor);
+        }
     }
 
     function handleSlotClick(role, teamColor) {
-        if (selectedChampion && teamColor === mySide) {
-            socket.emit('champion-pick', { roomId, champion: selectedChampion, role });
+        if (selectedChampion && teamColor === mySide && currentGameState) {
+            const currentTurnColor = currentGameState.draftOrder[currentGameState.turn];
+            const myTeamData = mySide === 'blue' ? currentGameState.blueTeam : currentGameState.redTeam;
+
+            if (mySide === currentTurnColor && myTeamData[role] === null) {
+                socket.emit('champion-pick', { roomId, champion: selectedChampion, role });
+            }
         }
     }
     
     // --- LÓGICA DA TELA FINAL ---
 
     playAgainButton.addEventListener('click', () => {
-        // Ao clicar em jogar novamente, o draft é resetado e a UI é atualizada
         socket.emit('reset-game', roomId);
     });
 
@@ -134,34 +146,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- ATUALIZAÇÃO DA INTERFACE (UI) ---
 
     function updateDraftUI(room) {
-        const state = room.gameState;
-        if (!state) return; // Se o jogo ainda não começou
+        currentGameState = room.gameState; 
+        if (!currentGameState) return; 
 
-        const myTeamData = mySide === 'blue' ? state.blueTeam : state.redTeam;
-        const opponentTeamData = mySide === 'blue' ? state.redTeam : state.blueTeam;
-        const currentTurnColor = state.draftOrder[state.turn];
+        const { gameState } = room;
+        const currentTurnColor = gameState.draftOrder[gameState.turn];
 
-        updateTeamPicks(blueTeamPicksContainer, state.blueTeam, 'blue', currentTurnColor);
-        updateTeamPicks(redTeamPicksContainer, state.redTeam, 'red', currentTurnColor);
+        updateTeamPicks(blueTeamPicksContainer, gameState.blueTeam, 'blue', currentTurnColor);
+        updateTeamPicks(redTeamPicksContainer, gameState.redTeam, 'red', currentTurnColor);
         
-        const pickedIds = new Set(state.pickedChampions.map(c => c.id));
+        const pickedIds = new Set(gameState.pickedChampions.map(c => c.id));
         document.querySelectorAll('.champion-icon').forEach(icon => {
             icon.classList.toggle('picked', pickedIds.has(icon.dataset.id));
             icon.classList.remove('selected');
         });
         selectedChampion = null;
 
-        if (state.turn < 10) {
+        if (gameState.turn < 10) {
             turnIndicator.innerText = `Vez do Time ${currentTurnColor === 'blue' ? 'Azul' : 'Vermelho'}`;
             turnIndicator.style.color = currentTurnColor === 'blue' ? '#59bfff' : '#ff5959';
         } else {
-            showEndScreen(state);
+            showEndScreen(gameState);
         }
     }
 
     function updateTeamPicks(container, teamData, teamColor, currentTurnColor) {
         Object.keys(teamData).forEach(role => {
             const slot = container.querySelector(`.pick-slot[data-role="${role.toUpperCase()}"]`);
+            if (!slot) return;
             const champion = teamData[role];
             if (champion) {
                 slot.innerHTML = `<img src="${DDRAGON_URL}${champion.id}.png" alt="${champion.nome}"><div class="champion-name">${champion.nome}</div>`;
@@ -227,14 +239,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         socket.on('game-update', (room) => {
-             // Quando o jogo reseta, volta para o draft
-            if(room.gameState.turn === 0){
+            if (room.gameState.turn === 0) {
                 showScreen('draft');
             }
             updateDraftUI(room);
         });
-
-        socket.on('game-state-response', (state) => updateDraftUI(state));
 
         showScreen('lobby');
         validateCreation();
