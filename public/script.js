@@ -1,192 +1,86 @@
-// public/script.js - VERSÃO COM TELA FINAL
+// public/script.js - VERSÃO DE DIAGNÓSTICO
 
-document.addEventListener('DOMContentLoaded', async () => {
-    const socket = io();
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("1. Documento carregado. A iniciar o script.");
 
-    // Elementos da UI
-    const draftContainer = document.querySelector('.draft-container');
-    const championGrid = document.getElementById('champion-grid');
-    const blueTeamPicksContainer = document.getElementById('blue-team-picks');
-    const redTeamPicksContainer = document.getElementById('red-team-picks');
-    const turnIndicator = document.getElementById('turn-indicator');
+    try {
+        const socket = io();
 
-    // Elementos da Tela Final
-    const endScreen = document.getElementById('end-screen');
-    const resultTitle = document.getElementById('result-title');
-    const myFinalScore = document.getElementById('my-final-score');
-    const opponentResultTitle = document.getElementById('opponent-result-title');
-    const opponentFinalScore = document.getElementById('opponent-final-score');
-    const scoreDifference = document.getElementById('score-difference');
-    const playAgainButton = document.getElementById('play-again-button');
+        // Telas
+        const screens = {
+            lobby: document.getElementById('lobby-screen'),
+            draft: document.getElementById('draft-screen'),
+            end: document.getElementById('end-screen')
+        };
+        console.log("2. Ecrãs encontrados:", screens.lobby ? 'OK' : 'FALHA', screens.draft ? 'OK' : 'FALHA', screens.end ? 'OK' : 'FALHA');
 
-    let allChampions = [];
-    let myTeam = null;
-    let roomId = null;
-    let DDRAGON_URL = '';
-    let selectedChampion = null;
+        // Elementos do Lobby
+        const roomNameInput = document.getElementById('room-name-input');
+        const sideButtons = document.querySelectorAll('.side-button');
+        const createRoomButton = document.getElementById('create-room-button');
+        const roomList = document.getElementById('room-list');
+        console.log("3. Elementos do Lobby encontrados:", roomNameInput ? 'OK' : 'FALHA', sideButtons.length > 0 ? 'OK' : 'FALHA', createRoomButton ? 'OK' : 'FALHA');
 
-    async function initializeGame() {
-        try {
-            const versionsResponse = await fetch('https://ddragon.leagueoflegends.com/api/versions.json');
-            const versions = await versionsResponse.json();
-            const latestVersion = versions[0];
-            DDRAGON_URL = `https://ddragon.leagueoflegends.com/cdn/${latestVersion}/img/champion/`;
-            await loadChampions();
-        } catch (error) {
-            console.error("Erro ao inicializar o jogo:", error);
-        }
-    }
+        // ... (outros elementos)
 
-    async function loadChampions() {
-        // ... (código existente sem alterações)
-        const response = await fetch('campeoes.json');
-        allChampions = await response.json();
-        populateChampionGrid();
-    }
+        let selectedSide = null;
+        let mySide = null;
+        let roomId = null;
 
-    function populateChampionGrid() {
-        // ... (código existente sem alterações)
-        championGrid.innerHTML = '';
-        allChampions.forEach(champ => {
-            const champDiv = document.createElement('div');
-            champDiv.classList.add('champion-icon');
-            champDiv.dataset.id = champ.id;
-            champDiv.innerHTML = `<img src="${DDRAGON_URL}${champ.id}.png" alt="${champ.nome}">`;
-            champDiv.addEventListener('click', () => handleChampionClick(champ, champDiv));
-            championGrid.appendChild(champDiv);
+        // --- LÓGICA DO LOBBY ---
+
+        sideButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                console.log("Botão de lado clicado:", button.dataset.side);
+                sideButtons.forEach(btn => btn.classList.remove('selected'));
+                button.classList.add('selected');
+                selectedSide = button.dataset.side;
+                validateCreation();
+            });
         });
-    }
 
-    function handleChampionClick(champion, element) {
-        // ... (código existente sem alterações)
-        if (selectedChampion) {
-            document.querySelector('.champion-icon.selected')?.classList.remove('selected');
-        }
-        selectedChampion = champion;
-        element.classList.add('selected');
-        socket.emit('get-game-state', roomId);
-    }
-
-    function handleSlotClick(role, teamColor) {
-        // ... (código existente sem alterações)
-        if (selectedChampion && teamColor === myTeam) {
-            socket.emit('champion-pick', { roomId, champion: selectedChampion, role });
-            selectedChampion = null;
-            document.querySelector('.champion-icon.selected')?.classList.remove('selected');
-        }
-    }
-
-    document.querySelectorAll('.pick-slot').forEach(slot => {
-        // ... (código existente sem alterações)
-        const role = slot.dataset.role;
-        const teamColor = slot.closest('.team-panel').classList.contains('blue-team') ? 'blue' : 'red';
-        slot.addEventListener('click', () => handleSlotClick(role, teamColor));
-    });
-
-    playAgainButton.addEventListener('click', () => {
-        endScreen.classList.remove('visible');
-        draftContainer.style.display = 'flex';
-        socket.emit('reset-game', roomId);
-    });
-
-    // --- OUVINTES DO SERVIDOR ---
-    socket.on('waiting', (message) => turnIndicator.innerText = message);
-
-    socket.on('game-start', (data) => {
-        myTeam = data.yourTeam;
-        roomId = data.room;
-        document.querySelectorAll('.team-panel').forEach(p => p.style.border = 'none');
-        document.querySelector(`.${myTeam}-team`).style.border = '3px solid #c89b3c';
-    });
-    
-    socket.on('game-state-response', (gameState) => {
-        if (gameState) updateUI(gameState);
-    });
-
-    socket.on('game-update', (gameState) => {
-        updateUI(gameState);
-    });
-
-    function updateUI(state) {
-        // A lógica de pontuação agora é invisível para o jogador
-        // document.getElementById('blue-score').innerText = state.blueScore; (REMOVIDO)
-        // document.getElementById('red-score').innerText = state.redScore; (REMOVIDO)
-
-        updateTeamPicks(blueTeamPicksContainer, state.blueTeam, 'blue', state);
-        updateTeamPicks(redTeamPicksContainer, state.redTeam, 'red', state);
-    
-        const pickedIds = new Set(Object.values(state.blueTeam).concat(Object.values(state.redTeam)).filter(c => c).map(c => c.id));
-    
-        document.querySelectorAll('.champion-icon').forEach(icon => {
-            icon.classList.toggle('picked', pickedIds.has(icon.dataset.id));
+        roomNameInput.addEventListener('input', () => {
+            console.log("Texto inserido no nome da sala:", roomNameInput.value);
+            validateCreation();
         });
-    
-        if (state.turn < 10) {
-            const currentTurnColor = state.draftOrder[state.turn];
-            turnIndicator.innerText = `Vez do Time ${currentTurnColor === 'blue' ? 'Azul' : 'Vermelho'}`;
-            turnIndicator.style.color = currentTurnColor === 'blue' ? '#59bfff' : '#ff5959';
-        } else {
-            // FIM DO DRAFT - CHAMA A NOVA TELA
-            showEndScreen(state);
-        }
-    }
 
-    function updateTeamPicks(container, team, teamColor, state) {
-        // ... (código existente sem alterações)
-        const roles = ['TOP', 'JG', 'MID', 'ADC', 'SUP'];
-        const currentTurnColor = state.draftOrder[state.turn];
-    
-        roles.forEach(role => {
-            const slot = container.querySelector(`.pick-slot[data-role="${role}"]`);
-            const champion = team[role];
-    
-            if (champion) {
-                slot.innerHTML = `<img src="${DDRAGON_URL}${champion.id}.png" alt="${champion.nome}"><div class="champion-name">${champion.nome}</div>`;
-                slot.classList.add('filled');
-                slot.classList.remove('available');
-
-            } else {
-                slot.innerHTML = `<span>${role}</span>`;
-                slot.classList.remove('filled');
-                const isAvailable = currentTurnColor === teamColor && myTeam === teamColor && selectedChampion;
-                slot.classList.toggle('available', isAvailable);
-            }
+        createRoomButton.addEventListener('click', () => {
+            console.log("Botão 'Criar Sala' clicado.");
+            socket.emit('create-room', { roomName: roomNameInput.value.trim(), side: selectedSide });
         });
-    }
 
-    // --- NOVA FUNÇÃO PARA MOSTRAR A TELA FINAL ---
-    function showEndScreen(state) {
-        draftContainer.style.display = 'none'; // Esconde a tela de draft
-        const winner = state.blueScore > state.redScore ? 'blue' : 'red';
-        const diff = Math.abs(state.blueScore - state.redScore);
-
-        const myScore = myTeam === 'blue' ? state.blueScore : state.redScore;
-        const opponentScore = myTeam === 'blue' ? state.redScore : state.blueScore;
-        const opponentTeamColor = myTeam === 'blue' ? 'red' : 'blue';
-
-        // Configura o painel do jogador
-        myFinalScore.innerText = myScore;
-        if (myTeam === winner) {
-            resultTitle.innerText = "Vitória";
-            resultTitle.parentElement.className = 'result-panel victory';
-        } else {
-            resultTitle.innerText = "Derrota";
-            resultTitle.parentElement.className = 'result-panel defeat';
+        function validateCreation() {
+            const isNameValid = roomNameInput && roomNameInput.value.trim() !== '';
+            const isSideSelected = selectedSide !== null;
+            createRoomButton.disabled = !(isNameValid && isSideSelected);
+            console.log(`Validando... Nome: ${isNameValid}, Lado: ${isSideSelected}. Botão desabilitado: ${createRoomButton.disabled}`);
+        }
+        
+        function showScreen(screenId) {
+            console.log("A mostrar ecrã:", screenId);
+            Object.values(screens).forEach(screen => screen.classList.remove('visible'));
+            screens[screenId].classList.add('visible');
         }
 
-        // Configura o painel do oponente
-        opponentFinalScore.innerText = opponentScore;
-        if (opponentTeamColor === winner) {
-            opponentResultTitle.innerText = "Vitória";
-            opponentResultTitle.parentElement.className = 'result-panel opponent victory';
-        } else {
-            opponentResultTitle.innerText = "Derrota";
-            opponentResultTitle.parentElement.className = 'result-panel opponent defeat';
-        }
+        // --- OUVINTES DO SOCKET ---
+        socket.on('connect', () => {
+            console.log("Conectado ao servidor via Socket.IO!");
+            socket.emit('get-room-list');
+        });
+        
+        socket.on('room-list-update', (rooms) => {
+            console.log("Recebida lista de salas atualizada:", rooms);
+            // ... (lógica de renderização)
+        });
 
-        scoreDifference.innerText = `Diferença de ${diff} pontos.`;
-        endScreen.classList.add('visible'); // Mostra a tela final
+        // ... (resto do código)
+        
+        // --- INICIALIZAÇÃO ---
+        console.log("A iniciar a aplicação...");
+        showScreen('lobby');
+        validateCreation();
+
+    } catch (error) {
+        console.error("ERRO CRÍTICO NO SCRIPT:", error);
     }
-
-    initializeGame();
 });
