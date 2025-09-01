@@ -1,19 +1,27 @@
-// public/script.js - VERSÃO COM DRAFT PROFISSIONAL
+// public/script.js - VERSÃO COM FILTRO DE BUSCA
 
 document.addEventListener('DOMContentLoaded', () => {
     const socket = io();
 
+    // Telas
     const screens = { lobby: document.getElementById('lobby-screen'), draft: document.getElementById('draft-screen'), end: document.getElementById('end-screen') };
+
+    // Elementos do Lobby
     const roomNameInput = document.getElementById('room-name-input');
     const sideButtons = document.querySelectorAll('.side-button');
     const createRoomButton = document.getElementById('create-room-button');
     const roomList = document.getElementById('room-list');
+    
+    // Elementos do Draft
+    const searchInput = document.getElementById('search-input');
     const championGrid = document.getElementById('champion-grid');
     const turnIndicator = document.getElementById('turn-indicator');
     const blueTeamPicksContainer = document.getElementById('blue-team-picks');
     const redTeamPicksContainer = document.getElementById('red-team-picks');
     const blueTeamBansContainer = document.getElementById('blue-team-bans');
     const redTeamBansContainer = document.getElementById('red-team-bans');
+
+    // Elementos da Tela Final
     const resultTitle = document.getElementById('result-title');
     const myFinalScore = document.getElementById('my-final-score');
     const opponentResultTitle = document.getElementById('opponent-result-title');
@@ -21,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDifference = document.getElementById('score-difference');
     const playAgainButton = document.getElementById('play-again-button');
 
+    // Estado do Cliente
     let selectedSide, mySide, roomId, selectedChampion = null;
     let currentGameState = null;
     let allChampions = [];
@@ -37,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'pick', team: 'red' }
     ];
 
+    // --- LÓGICA DO LOBBY ---
     sideButtons.forEach(button => {
         button.addEventListener('click', () => {
             sideButtons.forEach(btn => btn.classList.remove('selected'));
@@ -45,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
             validateCreation();
         });
     });
-
     roomNameInput.addEventListener('input', validateCreation);
     createRoomButton.addEventListener('click', () => socket.emit('create-room', { roomName: roomNameInput.value.trim(), side: selectedSide }));
     roomList.addEventListener('click', (e) => {
@@ -77,6 +86,30 @@ document.addEventListener('DOMContentLoaded', () => {
     function showScreen(screenId) {
         Object.values(screens).forEach(screen => screen.classList.remove('visible'));
         screens[screenId].classList.add('visible');
+    }
+
+    // --- LÓGICA DO DRAFT E BAN ---
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredChampions = allChampions.filter(champ => 
+            champ.nome.toLowerCase().includes(searchTerm)
+        );
+        populateChampionGrid(filteredChampions);
+        if (currentGameState) {
+            updateUsedChampions(currentGameState.bannedOrPickedChampions);
+        }
+    });
+
+    function populateChampionGrid(championsToDisplay) {
+        championGrid.innerHTML = '';
+        championsToDisplay.forEach(champ => {
+            const champDiv = document.createElement('div');
+            champDiv.classList.add('champion-icon');
+            champDiv.dataset.id = champ.id;
+            champDiv.innerHTML = `<img src="${DDRAGON_URL}${champ.id}.png" alt="${champ.nome}">`;
+            champDiv.addEventListener('click', () => handleChampionClick(champ, champDiv));
+            championGrid.appendChild(champDiv);
+        });
     }
 
     function handleChampionClick(champion, element) {
@@ -122,10 +155,22 @@ document.addEventListener('DOMContentLoaded', () => {
         scoreDifference.innerText = `Diferença de ${diff} pontos.`;
     }
 
+    function updateUsedChampions(bannedOrPickedChampions) {
+        const usedIds = new Set((bannedOrPickedChampions || []).map(c => c.id));
+        document.querySelectorAll('.champion-icon').forEach(icon => {
+            icon.classList.toggle('picked', usedIds.has(icon.dataset.id));
+        });
+    }
+
     function updateDraftUI(room) {
         currentGameState = room.gameState;
         if (!currentGameState) return;
         const { turn, blueBans, redBans, blueTeam, redTeam, bannedOrPickedChampions } = currentGameState;
+
+        if (searchInput.value) {
+            searchInput.value = '';
+            populateChampionGrid(allChampions);
+        }
 
         if (turn >= DRAFT_ORDER.length) {
             showEndScreen(currentGameState);
@@ -144,17 +189,12 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTeamPicks(blueTeamPicksContainer, blueTeam, 'blue', currentAction);
         updateTeamPicks(redTeamPicksContainer, redTeam, 'red', currentAction);
 
-        const usedIds = new Set((bannedOrPickedChampions || []).map(c => c.id));
-        document.querySelectorAll('.champion-icon').forEach(icon => {
-            icon.classList.toggle('picked', usedIds.has(icon.dataset.id));
-            if (!selectedChampion || icon.dataset.id !== selectedChampion.id) {
-               icon.classList.remove('selected');
-            }
-        });
+        updateUsedChampions(bannedOrPickedChampions);
         
-        if (currentAction.type === 'ban') {
-            selectedChampion = null;
+        if (document.querySelector('.champion-icon.selected')) {
+           document.querySelector('.champion-icon.selected').classList.remove('selected');
         }
+        selectedChampion = null;
     }
     
     function updateBanSlots(container, bans) {
@@ -197,15 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const championsResponse = await fetch('campeoes.json');
         allChampions = await championsResponse.json();
         
-        championGrid.innerHTML = '';
-        allChampions.forEach(champ => {
-            const champDiv = document.createElement('div');
-            champDiv.classList.add('champion-icon');
-            champDiv.dataset.id = champ.id;
-            champDiv.innerHTML = `<img src="${DDRAGON_URL}${champ.id}.png" alt="${champ.nome}">`;
-            champDiv.addEventListener('click', () => handleChampionClick(champ, champDiv));
-            championGrid.appendChild(champDiv);
-        });
+        populateChampionGrid(allChampions);
 
         document.querySelectorAll('.pick-slot').forEach(slot => {
             const role = slot.dataset.role;

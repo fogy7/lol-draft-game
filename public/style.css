@@ -163,6 +163,22 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+#search-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #010a13;
+    border: 1px solid #2c3c5c;
+    color: #c4b998;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
 #turn-indicator { color: #f0e6d2; border-bottom: 2px solid #c89b3c; padding-bottom: 10px; }
 #champion-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(65px, 1fr)); gap: 8px; overflow-y: auto; max-height: 80%; padding: 10px; background-color: #010a13; border: 1px solid #1e283b; flex-grow: 1; }
 .champion-icon { width: 65px; height: 65px; cursor: pointer; transition: transform 0.2s, filter 0.2s; position: relative; }
