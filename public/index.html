@@ -54,8 +54,19 @@
                 <h1 id="turn-indicator">Aguardando Oponente...</h1>
                 
                 <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Buscar campeão...">
+                    <input type="text" id="search-input" placeholder="Buscar por nome...">
                 </div>
+                
+                <div id="role-filters" class="role-filters">
+                    <button class="role-filter-btn active" data-filter="Todos">Todos</button>
+                    <button class="role-filter-btn" data-filter="Assassin">Assassinos</button>
+                    <button class="role-filter-btn" data-filter="Fighter">Lutadores</button>
+                    <button class="role-filter-btn" data-filter="Mage">Magos</button>
+                    <button class="role-filter-btn" data-filter="Marksman">Atiradores</button>
+                    <button class="role-filter-btn" data-filter="Support">Suportes</button>
+                    <button class="role-filter-btn" data-filter="Tank">Tanques</button>
+                </div>
+
                 <div id="champion-grid"></div>
             </div>
             <div class="team-panel red-team">

@@ -165,7 +165,7 @@ body {
 }
 
 .search-container {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 #search-input {
@@ -178,6 +178,36 @@ body {
     font-size: 1em;
     border-radius: 4px;
 }
+
+.role-filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.role-filter-btn {
+    padding: 8px 12px;
+    border: 1px solid #2c3c5c;
+    background-color: #010a13;
+    color: #a0946c;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.role-filter-btn:hover {
+    border-color: #c89b3c;
+    color: #c89b3c;
+}
+
+.role-filter-btn.active {
+    background-color: #c89b3c;
+    color: #010a13;
+    border-color: #c89b3c;
+    font-weight: bold;
+}
+
 
 #turn-indicator { color: #f0e6d2; border-bottom: 2px solid #c89b3c; padding-bottom: 10px; }
 #champion-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(65px, 1fr)); gap: 8px; overflow-y: auto; max-height: 80%; padding: 10px; background-color: #010a13; border: 1px solid #1e283b; flex-grow: 1; }

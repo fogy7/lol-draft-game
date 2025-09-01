@@ -3,9 +3,10 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
-// URL do Data Dragon para a versão mais recente dos campeões em português
-const DDRAGON_URL = 'https://ddragon.leagueoflegends.com/cdn/15.17.1/data/pt_BR/champion.json';
-// NOTA: A versão (15.17.1) pode ser atualizada no futuro.
+// ATUALIZE A VERSÃO CONFORME NECESSÁRIO (ex: '15.17.1')
+// Pode encontrar a versão mais recente em: https://ddragon.leagueoflegends.com/api/versions.json
+const DDRAGON_VERSION = '15.17.1'; 
+const DDRAGON_URL = `https://ddragon.leagueoflegends.com/cdn/${DDRAGON_VERSION}/data/pt_BR/champion.json`;
 
 async function fetchAndProcessChampions() {
     try {
@@ -17,38 +18,27 @@ async function fetchAndProcessChampions() {
 
         for (const key in championsData) {
             const champ = championsData[key];
-
-            // Mapeia as tags do Data Dragon para a nossa "funcao_primaria"
-            let funcao_primaria = 'Indefinido';
-            if (champ.tags.includes('Fighter')) funcao_primaria = 'Top';
-            if (champ.tags.includes('Tank')) funcao_primaria = 'Top';
-            if (champ.tags.includes('Mage')) funcao_primaria = 'Mid';
-            if (champ.tags.includes('Assassin')) funcao_primaria = 'Mid';
-            if (champ.tags.includes('Marksman')) funcao_primaria = 'ADC';
-            if (champ.tags.includes('Support')) funcao_primaria = 'Suporte';
-            // Junglers são mais complexos, mas podemos usar um placeholder
-            if (['Lee Sin', 'Master Yi', 'Jarvan IV', 'Rammus'].includes(champ.name)) {
-                funcao_primaria = 'Jungle';
-            }
             
             processedChampions.push({
                 id: champ.id,
                 nome: champ.name,
-                funcao_primaria: funcao_primaria,
+                tags: champ.tags, // Salva as tags de classe (Fighter, Mage, etc.)
                 // --- CAMPOS PARA PREENCHER MANUALMENTE ---
-                tipo_dano: "", // Preencher com 'AD', 'AP' ou 'Híbrido'
-                nivel_cc: "", // Preencher com 'Nulo', 'Baixo', 'Médio', 'Alto'
-                estilo_jogo: [], // Ex: ["Assassino", "Split Push"]
-                forca: "", // Preencher com 'Early Game', 'Mid Game', 'Late Game'
-                tipo_de_engage: "", // Preencher com 'Primário', 'Secundário', 'Nenhum'
+                tipo_dano: "", 
+                nivel_cc: "", 
+                estilo_jogo: [],
+                forca: "", 
+                tipo_de_engage: "",
                 sinergias_fortes_com: [],
                 fraco_contra: []
             });
         }
-        
-        console.log(`${processedChampions.length} campeões processados.`);
 
-        // Salva o arquivo na pasta 'public'
+        // Ordena a lista final de campeões por nome
+        processedChampions.sort((a, b) => a.nome.localeCompare(b.nome));
+        
+        console.log(`${processedChampions.length} campeões processados e ordenados.`);
+
         const outputPath = path.join(__dirname, 'public', 'campeoes.json');
         fs.writeFileSync(outputPath, JSON.stringify(processedChampions, null, 2));
 
