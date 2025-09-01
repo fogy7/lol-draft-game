@@ -18,11 +18,20 @@ async function fetchAndProcessChampions() {
 
         for (const key in championsData) {
             const champ = championsData[key];
+
+            let funcao_primaria = 'Indefinido';
+            if (champ.tags.includes('Fighter')) funcao_primaria = 'Lutador';
+            if (champ.tags.includes('Tank')) funcao_primaria = 'Tanque';
+            if (champ.tags.includes('Mage')) funcao_primaria = 'Mago';
+            if (champ.tags.includes('Assassin')) funcao_primaria = 'Assassino';
+            if (champ.tags.includes('Marksman')) funcao_primaria = 'Atirador';
+            if (champ.tags.includes('Support')) funcao_primaria = 'Suporte';
             
             processedChampions.push({
                 id: champ.id,
                 nome: champ.name,
-                tags: champ.tags, // Salva as tags de classe (Fighter, Mage, etc.)
+                tags: champ.tags, // CORREÇÃO: Adiciona as tags originais para o filtro
+                funcao_primaria: funcao_primaria, // Mantém a nossa lógica de função primária
                 // --- CAMPOS PARA PREENCHER MANUALMENTE ---
                 tipo_dano: "", 
                 nivel_cc: "", 
@@ -34,7 +43,6 @@ async function fetchAndProcessChampions() {
             });
         }
 
-        // Ordena a lista final de campeões por nome
         processedChampions.sort((a, b) => a.nome.localeCompare(b.nome));
         
         console.log(`${processedChampions.length} campeões processados e ordenados.`);

@@ -2,7 +2,10 @@
   {
     "id": "Aatrox",
     "nome": "Aatrox",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter"
+    ],
+    "funcao_primaria": "Lutador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -14,7 +17,11 @@
   {
     "id": "Ahri",
     "nome": "Ahri",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -26,7 +33,10 @@
   {
     "id": "Akali",
     "nome": "Akali",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -38,7 +48,11 @@
   {
     "id": "Akshan",
     "nome": "Akshan",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -50,6 +64,10 @@
   {
     "id": "Alistar",
     "nome": "Alistar",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -62,7 +80,11 @@
   {
     "id": "Ambessa",
     "nome": "Ambessa",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -74,6 +96,10 @@
   {
     "id": "Amumu",
     "nome": "Amumu",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -86,7 +112,10 @@
   {
     "id": "Anivia",
     "nome": "Anivia",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -98,6 +127,10 @@
   {
     "id": "Annie",
     "nome": "Annie",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -110,7 +143,10 @@
   {
     "id": "Aphelios",
     "nome": "Aphelios",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -122,6 +158,10 @@
   {
     "id": "Ashe",
     "nome": "Ashe",
+    "tags": [
+      "Marksman",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -134,7 +174,10 @@
   {
     "id": "AurelionSol",
     "nome": "Aurelion Sol",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -146,7 +189,11 @@
   {
     "id": "Aurora",
     "nome": "Aurora",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -158,7 +205,11 @@
   {
     "id": "Azir",
     "nome": "Azir",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Mage",
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -170,6 +221,10 @@
   {
     "id": "Bard",
     "nome": "Bardo",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -182,7 +237,10 @@
   {
     "id": "Belveth",
     "nome": "Bel'Veth",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter"
+    ],
+    "funcao_primaria": "Lutador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -194,6 +252,10 @@
   {
     "id": "Blitzcrank",
     "nome": "Blitzcrank",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -206,6 +268,10 @@
   {
     "id": "Brand",
     "nome": "Brand",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -218,6 +284,10 @@
   {
     "id": "Braum",
     "nome": "Braum",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -230,7 +300,11 @@
   {
     "id": "Briar",
     "nome": "Briar",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -242,7 +316,10 @@
   {
     "id": "Caitlyn",
     "nome": "Caitlyn",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -254,7 +331,11 @@
   {
     "id": "Camille",
     "nome": "Camille",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -266,7 +347,10 @@
   {
     "id": "Cassiopeia",
     "nome": "Cassiopeia",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -278,7 +362,11 @@
   {
     "id": "Chogath",
     "nome": "Cho'Gath",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -290,7 +378,11 @@
   {
     "id": "Corki",
     "nome": "Corki",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -302,7 +394,11 @@
   {
     "id": "Darius",
     "nome": "Darius",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -314,19 +410,11 @@
   {
     "id": "Diana",
     "nome": "Diana",
-    "funcao_primaria": "Mid",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
-  },
-  {
-    "id": "Draven",
-    "nome": "Draven",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -338,7 +426,26 @@
   {
     "id": "DrMundo",
     "nome": "Dr. Mundo",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
+    "funcao_primaria": "Tanque",
+    "tipo_dano": "",
+    "nivel_cc": "",
+    "estilo_jogo": [],
+    "forca": "",
+    "tipo_de_engage": "",
+    "sinergias_fortes_com": [],
+    "fraco_contra": []
+  },
+  {
+    "id": "Draven",
+    "nome": "Draven",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -350,7 +457,11 @@
   {
     "id": "Ekko",
     "nome": "Ekko",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -362,7 +473,11 @@
   {
     "id": "Elise",
     "nome": "Elise",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -374,7 +489,11 @@
   {
     "id": "Evelynn",
     "nome": "Evelynn",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -386,7 +505,11 @@
   {
     "id": "Ezreal",
     "nome": "Ezreal",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -398,6 +521,10 @@
   {
     "id": "Fiddlesticks",
     "nome": "Fiddlesticks",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -410,7 +537,11 @@
   {
     "id": "Fiora",
     "nome": "Fiora",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -422,7 +553,11 @@
   {
     "id": "Fizz",
     "nome": "Fizz",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -434,7 +569,11 @@
   {
     "id": "Galio",
     "nome": "Galio",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -446,7 +585,10 @@
   {
     "id": "Gangplank",
     "nome": "Gangplank",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter"
+    ],
+    "funcao_primaria": "Lutador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -458,7 +600,11 @@
   {
     "id": "Garen",
     "nome": "Garen",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -470,7 +616,11 @@
   {
     "id": "Gnar",
     "nome": "Gnar",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -482,7 +632,11 @@
   {
     "id": "Gragas",
     "nome": "Gragas",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -494,7 +648,10 @@
   {
     "id": "Graves",
     "nome": "Graves",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -506,7 +663,10 @@
   {
     "id": "Gwen",
     "nome": "Gwen",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter"
+    ],
+    "funcao_primaria": "Lutador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -518,7 +678,11 @@
   {
     "id": "Hecarim",
     "nome": "Hecarim",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -530,6 +694,10 @@
   {
     "id": "Heimerdinger",
     "nome": "Heimerdinger",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -542,6 +710,10 @@
   {
     "id": "Hwei",
     "nome": "Hwei",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -554,7 +726,11 @@
   {
     "id": "Illaoi",
     "nome": "Illaoi",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -566,7 +742,11 @@
   {
     "id": "Irelia",
     "nome": "Irelia",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -578,6 +758,10 @@
   {
     "id": "Ivern",
     "nome": "Ivern",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -590,6 +774,10 @@
   {
     "id": "Janna",
     "nome": "Janna",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -602,7 +790,11 @@
   {
     "id": "JarvanIV",
     "nome": "Jarvan IV",
-    "funcao_primaria": "Jungle",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -614,7 +806,10 @@
   {
     "id": "Jax",
     "nome": "Jax",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter"
+    ],
+    "funcao_primaria": "Lutador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -626,7 +821,11 @@
   {
     "id": "Jayce",
     "nome": "Jayce",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Fighter",
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -638,7 +837,11 @@
   {
     "id": "Jhin",
     "nome": "Jhin",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -650,7 +853,26 @@
   {
     "id": "Jinx",
     "nome": "Jinx",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
+    "tipo_dano": "",
+    "nivel_cc": "",
+    "estilo_jogo": [],
+    "forca": "",
+    "tipo_de_engage": "",
+    "sinergias_fortes_com": [],
+    "fraco_contra": []
+  },
+  {
+    "id": "KSante",
+    "nome": "K'Sante",
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -662,7 +884,11 @@
   {
     "id": "Kaisa",
     "nome": "Kai'Sa",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -674,7 +900,10 @@
   {
     "id": "Kalista",
     "nome": "Kalista",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -686,6 +915,10 @@
   {
     "id": "Karma",
     "nome": "Karma",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -698,7 +931,10 @@
   {
     "id": "Karthus",
     "nome": "Karthus",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -710,7 +946,11 @@
   {
     "id": "Kassadin",
     "nome": "Kassadin",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -722,7 +962,11 @@
   {
     "id": "Katarina",
     "nome": "Katarina",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -734,7 +978,11 @@
   {
     "id": "Kayle",
     "nome": "Kayle",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Mage",
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -746,7 +994,11 @@
   {
     "id": "Kayn",
     "nome": "Kayn",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -758,7 +1010,10 @@
   {
     "id": "Kennen",
     "nome": "Kennen",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -770,7 +1025,10 @@
   {
     "id": "Khazix",
     "nome": "Kha'Zix",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -782,7 +1040,10 @@
   {
     "id": "Kindred",
     "nome": "Kindred",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -794,7 +1055,10 @@
   {
     "id": "Kled",
     "nome": "Kled",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter"
+    ],
+    "funcao_primaria": "Lutador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -806,19 +1070,11 @@
   {
     "id": "KogMaw",
     "nome": "Kog'Maw",
-    "funcao_primaria": "ADC",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
-  },
-  {
-    "id": "KSante",
-    "nome": "K'Sante",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -830,7 +1086,11 @@
   {
     "id": "Leblanc",
     "nome": "LeBlanc",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -842,7 +1102,11 @@
   {
     "id": "LeeSin",
     "nome": "Lee Sin",
-    "funcao_primaria": "Jungle",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -854,6 +1118,10 @@
   {
     "id": "Leona",
     "nome": "Leona",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -866,7 +1134,11 @@
   {
     "id": "Lillia",
     "nome": "Lillia",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -878,7 +1150,10 @@
   {
     "id": "Lissandra",
     "nome": "Lissandra",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -890,7 +1165,11 @@
   {
     "id": "Lucian",
     "nome": "Lucian",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -902,6 +1181,10 @@
   {
     "id": "Lulu",
     "nome": "Lulu",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -914,6 +1197,10 @@
   {
     "id": "Lux",
     "nome": "Lux",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -926,7 +1213,11 @@
   {
     "id": "Malphite",
     "nome": "Malphite",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -938,7 +1229,10 @@
   {
     "id": "Malzahar",
     "nome": "Malzahar",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -950,6 +1244,10 @@
   {
     "id": "Maokai",
     "nome": "Maokai",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -962,7 +1260,11 @@
   {
     "id": "MasterYi",
     "nome": "Master Yi",
-    "funcao_primaria": "Jungle",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -974,6 +1276,10 @@
   {
     "id": "Mel",
     "nome": "Mel",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -986,6 +1292,10 @@
   {
     "id": "Milio",
     "nome": "Milio",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -998,19 +1308,11 @@
   {
     "id": "MissFortune",
     "nome": "Miss Fortune",
-    "funcao_primaria": "ADC",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
-  },
-  {
-    "id": "MonkeyKing",
-    "nome": "Wukong",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1022,7 +1324,11 @@
   {
     "id": "Mordekaiser",
     "nome": "Mordekaiser",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1034,6 +1340,10 @@
   {
     "id": "Morgana",
     "nome": "Morgana",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1046,7 +1356,11 @@
   {
     "id": "Naafiri",
     "nome": "Naafiri",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1058,6 +1372,10 @@
   {
     "id": "Nami",
     "nome": "Nami",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1070,7 +1388,11 @@
   {
     "id": "Nasus",
     "nome": "Nasus",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1082,6 +1404,10 @@
   {
     "id": "Nautilus",
     "nome": "Nautilus",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1094,6 +1420,10 @@
   {
     "id": "Neeko",
     "nome": "Neeko",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1106,7 +1436,11 @@
   {
     "id": "Nidalee",
     "nome": "Nidalee",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Mage"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1118,7 +1452,11 @@
   {
     "id": "Nilah",
     "nome": "Nilah",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1130,7 +1468,11 @@
   {
     "id": "Nocturne",
     "nome": "Nocturne",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1142,7 +1484,11 @@
   {
     "id": "Nunu",
     "nome": "Nunu e Willump",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1154,7 +1500,11 @@
   {
     "id": "Olaf",
     "nome": "Olaf",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1166,6 +1516,10 @@
   {
     "id": "Orianna",
     "nome": "Orianna",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1178,7 +1532,10 @@
   {
     "id": "Ornn",
     "nome": "Ornn",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1190,7 +1547,11 @@
   {
     "id": "Pantheon",
     "nome": "Pantheon",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1202,7 +1563,11 @@
   {
     "id": "Poppy",
     "nome": "Poppy",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1214,6 +1579,10 @@
   {
     "id": "Pyke",
     "nome": "Pyke",
+    "tags": [
+      "Support",
+      "Assassin"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1226,7 +1595,10 @@
   {
     "id": "Qiyana",
     "nome": "Qiyana",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1238,7 +1610,11 @@
   {
     "id": "Quinn",
     "nome": "Quinn",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1250,6 +1626,9 @@
   {
     "id": "Rakan",
     "nome": "Rakan",
+    "tags": [
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1262,7 +1641,10 @@
   {
     "id": "Rammus",
     "nome": "Rammus",
-    "funcao_primaria": "Jungle",
+    "tags": [
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1274,7 +1656,11 @@
   {
     "id": "RekSai",
     "nome": "Rek'Sai",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1286,6 +1672,10 @@
   {
     "id": "Rell",
     "nome": "Rell",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1298,6 +1688,10 @@
   {
     "id": "Renata",
     "nome": "Renata Glasc",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1310,7 +1704,11 @@
   {
     "id": "Renekton",
     "nome": "Renekton",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1322,7 +1720,11 @@
   {
     "id": "Rengar",
     "nome": "Rengar",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin",
+      "Fighter"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1334,7 +1736,11 @@
   {
     "id": "Riven",
     "nome": "Riven",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1346,7 +1752,11 @@
   {
     "id": "Rumble",
     "nome": "Rumble",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1358,7 +1768,10 @@
   {
     "id": "Ryze",
     "nome": "Ryze",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1370,7 +1783,11 @@
   {
     "id": "Samira",
     "nome": "Samira",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1382,7 +1799,10 @@
   {
     "id": "Sejuani",
     "nome": "Sejuani",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1394,6 +1814,10 @@
   {
     "id": "Senna",
     "nome": "Senna",
+    "tags": [
+      "Support",
+      "Marksman"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1406,6 +1830,10 @@
   {
     "id": "Seraphine",
     "nome": "Seraphine",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1418,7 +1846,11 @@
   {
     "id": "Sett",
     "nome": "Sett",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1430,7 +1862,10 @@
   {
     "id": "Shaco",
     "nome": "Shaco",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1442,7 +1877,10 @@
   {
     "id": "Shen",
     "nome": "Shen",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1454,7 +1892,11 @@
   {
     "id": "Shyvana",
     "nome": "Shyvana",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1466,7 +1908,11 @@
   {
     "id": "Singed",
     "nome": "Singed",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Tank",
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1478,7 +1924,11 @@
   {
     "id": "Sion",
     "nome": "Sion",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1490,7 +1940,10 @@
   {
     "id": "Sivir",
     "nome": "Sivir",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1502,7 +1955,11 @@
   {
     "id": "Skarner",
     "nome": "Skarner",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1514,7 +1971,11 @@
   {
     "id": "Smolder",
     "nome": "Smolder",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1526,6 +1987,10 @@
   {
     "id": "Sona",
     "nome": "Sona",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1538,6 +2003,10 @@
   {
     "id": "Soraka",
     "nome": "Soraka",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1550,6 +2019,10 @@
   {
     "id": "Swain",
     "nome": "Swain",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1562,7 +2035,11 @@
   {
     "id": "Sylas",
     "nome": "Sylas",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1574,7 +2051,10 @@
   {
     "id": "Syndra",
     "nome": "Syndra",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1586,6 +2066,10 @@
   {
     "id": "TahmKench",
     "nome": "Tahm Kench",
+    "tags": [
+      "Tank",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1598,6 +2082,10 @@
   {
     "id": "Taliyah",
     "nome": "Taliyah",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1610,7 +2098,10 @@
   {
     "id": "Talon",
     "nome": "Talon",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1622,6 +2113,10 @@
   {
     "id": "Taric",
     "nome": "Taric",
+    "tags": [
+      "Support",
+      "Tank"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1634,7 +2129,11 @@
   {
     "id": "Teemo",
     "nome": "Teemo",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1646,6 +2145,10 @@
   {
     "id": "Thresh",
     "nome": "Thresh",
+    "tags": [
+      "Support",
+      "Tank"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1658,7 +2161,11 @@
   {
     "id": "Tristana",
     "nome": "Tristana",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1670,7 +2177,11 @@
   {
     "id": "Trundle",
     "nome": "Trundle",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1682,7 +2193,11 @@
   {
     "id": "Tryndamere",
     "nome": "Tryndamere",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1694,7 +2209,11 @@
   {
     "id": "TwistedFate",
     "nome": "Twisted Fate",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Mage",
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1706,7 +2225,11 @@
   {
     "id": "Twitch",
     "nome": "Twitch",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1718,7 +2241,11 @@
   {
     "id": "Udyr",
     "nome": "Udyr",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1730,7 +2257,11 @@
   {
     "id": "Urgot",
     "nome": "Urgot",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1742,7 +2273,11 @@
   {
     "id": "Varus",
     "nome": "Varus",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Mage"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1754,7 +2289,11 @@
   {
     "id": "Vayne",
     "nome": "Vayne",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman",
+      "Assassin"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1766,7 +2305,10 @@
   {
     "id": "Veigar",
     "nome": "Veigar",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1778,6 +2320,10 @@
   {
     "id": "Velkoz",
     "nome": "Vel'Koz",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1790,7 +2336,10 @@
   {
     "id": "Vex",
     "nome": "Vex",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1802,7 +2351,11 @@
   {
     "id": "Vi",
     "nome": "Vi",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1814,7 +2367,11 @@
   {
     "id": "Viego",
     "nome": "Viego",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1826,7 +2383,10 @@
   {
     "id": "Viktor",
     "nome": "Viktor",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1838,7 +2398,11 @@
   {
     "id": "Vladimir",
     "nome": "Vladimir",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage",
+      "Fighter"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1850,7 +2414,11 @@
   {
     "id": "Volibear",
     "nome": "Volibear",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1862,7 +2430,27 @@
   {
     "id": "Warwick",
     "nome": "Warwick",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
+    "tipo_dano": "",
+    "nivel_cc": "",
+    "estilo_jogo": [],
+    "forca": "",
+    "tipo_de_engage": "",
+    "sinergias_fortes_com": [],
+    "fraco_contra": []
+  },
+  {
+    "id": "MonkeyKing",
+    "nome": "Wukong",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1874,7 +2462,10 @@
   {
     "id": "Xayah",
     "nome": "Xayah",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1886,6 +2477,10 @@
   {
     "id": "Xerath",
     "nome": "Xerath",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1898,7 +2493,11 @@
   {
     "id": "XinZhao",
     "nome": "Xin Zhao",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1910,7 +2509,11 @@
   {
     "id": "Yasuo",
     "nome": "Yasuo",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1922,7 +2525,11 @@
   {
     "id": "Yone",
     "nome": "Yone",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Fighter",
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1934,7 +2541,11 @@
   {
     "id": "Yorick",
     "nome": "Yorick",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Fighter",
+      "Tank"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1946,7 +2557,10 @@
   {
     "id": "Yunara",
     "nome": "Yunara",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1958,6 +2572,10 @@
   {
     "id": "Yuumi",
     "nome": "Yuumi",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -1970,7 +2588,11 @@
   {
     "id": "Zac",
     "nome": "Zac",
-    "funcao_primaria": "Top",
+    "tags": [
+      "Tank",
+      "Fighter"
+    ],
+    "funcao_primaria": "Tanque",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1982,7 +2604,10 @@
   {
     "id": "Zed",
     "nome": "Zed",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Assassin"
+    ],
+    "funcao_primaria": "Assassino",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -1994,7 +2619,10 @@
   {
     "id": "Zeri",
     "nome": "Zeri",
-    "funcao_primaria": "ADC",
+    "tags": [
+      "Marksman"
+    ],
+    "funcao_primaria": "Atirador",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -2006,7 +2634,10 @@
   {
     "id": "Ziggs",
     "nome": "Ziggs",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -2018,6 +2649,10 @@
   {
     "id": "Zilean",
     "nome": "Zilean",
+    "tags": [
+      "Support",
+      "Mage"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
@@ -2030,7 +2665,10 @@
   {
     "id": "Zoe",
     "nome": "Zoe",
-    "funcao_primaria": "Mid",
+    "tags": [
+      "Mage"
+    ],
+    "funcao_primaria": "Mago",
     "tipo_dano": "",
     "nivel_cc": "",
     "estilo_jogo": [],
@@ -2042,6 +2680,10 @@
   {
     "id": "Zyra",
     "nome": "Zyra",
+    "tags": [
+      "Mage",
+      "Support"
+    ],
     "funcao_primaria": "Suporte",
     "tipo_dano": "",
     "nivel_cc": "",
