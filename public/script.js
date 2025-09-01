@@ -1,4 +1,4 @@
-// public/script.js - VERSÃO FINAL COM FILTRO E CORREÇÃO DE PICK
+// public/script.js - VERSÃO DE DIAGNÓSTICO COMPLETA
 
 document.addEventListener('DOMContentLoaded', () => {
     const socket = io();
@@ -92,7 +92,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     function validateCreation() { createRoomButton.disabled = !(roomNameInput.value.trim() && selectedSide); }
-    function renderRoomList(rooms) { /* ...código de renderização de salas sem alterações... */ }
+    
+    function renderRoomList(rooms) {
+        roomList.innerHTML = rooms.length === 0 ? '<p>Nenhuma sala aberta. Crie a sua!</p>' : '';
+        rooms.forEach(room => {
+            const roomItem = document.createElement('div');
+            roomItem.className = 'room-item';
+            const playerSides = Object.values(room.players).map(p => p.side);
+            const canJoinBlue = !playerSides.includes('blue');
+            const canJoinRed = !playerSides.includes('red');
+            roomItem.innerHTML = `
+                <span>${room.name}</span>
+                <div>
+                    <button class="join-button blue" data-room-id="${room.id}" data-side="blue" ${!canJoinBlue ? 'disabled' : ''}>Entrar Azul</button>
+                    <button class="join-button red" data-room-id="${room.id}" data-side="red" ${!canJoinRed ? 'disabled' : ''}>Entrar Vermelho</button>
+                </div>`;
+            roomList.appendChild(roomItem);
+        });
+    }
+
     function showScreen(screenId) {
         Object.values(screens).forEach(screen => screen.classList.remove('visible'));
         screens[screenId].classList.add('visible');
@@ -140,7 +158,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LÓGICA DA TELA FINAL ---
     playAgainButton.addEventListener('click', () => socket.emit('reset-game', roomId));
-    function showEndScreen(state) { /* ...código da tela final sem alterações... */ }
+    
+    function showEndScreen(state) {
+        showScreen('end');
+        const winner = state.blueScore > state.redScore ? 'blue' : 'red';
+        const diff = Math.abs(state.blueScore - state.redScore);
+        const myScore = mySide === 'blue' ? state.blueScore : state.redScore;
+        const opponentScore = mySide === 'blue' ? state.redScore : state.blueScore;
+        myFinalScore.innerText = myScore;
+        resultTitle.parentElement.className = `result-panel ${mySide === winner ? 'victory' : 'defeat'}`;
+        resultTitle.innerText = mySide === winner ? "Vitória" : "Derrota";
+        opponentFinalScore.innerText = opponentScore;
+        opponentResultTitle.parentElement.className = `result-panel opponent ${mySide !== winner ? 'victory' : 'defeat'}`;
+        opponentResultTitle.innerText = mySide !== winner ? "Vitória" : "Derrota";
+        scoreDifference.innerText = `Diferença de ${diff} pontos.`;
+    }
 
     // --- ATUALIZAÇÃO DA INTERFACE (UI) ---
     function updateUsedChampions(bannedOrPickedChampions) {
@@ -154,36 +186,58 @@ document.addEventListener('DOMContentLoaded', () => {
         currentGameState = room.gameState;
         if (!currentGameState) return;
         const { turn, blueBans, redBans, blueTeam, redTeam, bannedOrPickedChampions } = currentGameState;
-
-        applyFilters(); // Re-aplica filtros para manter a visualização consistente
-
+        applyFilters();
         if (turn >= DRAFT_ORDER.length) {
             showEndScreen(currentGameState);
             return;
         }
-
         const currentAction = DRAFT_ORDER[turn];
         const teamText = currentAction.team === 'blue' ? 'Azul' : 'Vermelho';
         const actionText = currentAction.type === 'ban' ? 'bane' : 'escolhe';
         turnIndicator.innerText = `Time ${teamText} ${actionText}`;
         turnIndicator.style.color = currentAction.team === 'blue' ? '#59bfff' : '#ff5959';
-        
         updateBanSlots(blueTeamBansContainer, blueBans);
         updateBanSlots(redTeamBansContainer, redBans);
-
         updateTeamPicks(blueTeamPicksContainer, blueTeam, 'blue', currentAction);
         updateTeamPicks(redTeamPicksContainer, redTeam, 'red', currentAction);
-
         updateUsedChampions(bannedOrPickedChampions);
-        
         if (document.querySelector('.champion-icon.selected')) {
            document.querySelector('.champion-icon.selected').classList.remove('selected');
         }
         selectedChampion = null;
     }
     
-    function updateBanSlots(container, bans) { /* ...código sem alterações... */ }
-    function updateTeamPicks(container, teamData, teamColor, currentAction) { /* ...código sem alterações... */ }
+    function updateBanSlots(container, bans) {
+        const slots = container.querySelectorAll('.ban-slot');
+        slots.forEach((slot, index) => {
+            const champion = bans[index];
+            if (champion) {
+                slot.innerHTML = `<img src="${DDRAGON_URL}${champion.id}.png" alt="${champion.nome}">`;
+                slot.classList.add('filled');
+            } else {
+                slot.innerHTML = '';
+                slot.classList.remove('filled');
+            }
+        });
+    }
+
+    function updateTeamPicks(container, teamData, teamColor, currentAction) {
+        Object.keys(teamData).forEach(role => {
+            const slot = container.querySelector(`.pick-slot[data-role="${role.toUpperCase()}"]`);
+            if (!slot) return;
+            const champion = teamData[role];
+            if (champion) {
+                slot.innerHTML = `<img src="${DDRAGON_URL}${champion.id}.png" alt="${champion.nome}"><div class="champion-name">${champion.nome}</div>`;
+                slot.classList.add('filled');
+                slot.classList.remove('available');
+            } else {
+                slot.innerHTML = `<span>${role.toUpperCase()}</span>`;
+                slot.classList.remove('filled');
+                const isAvailable = currentAction.type === 'pick' && currentAction.team === teamColor && mySide === teamColor && selectedChampion;
+                slot.classList.toggle('available', isAvailable);
+            }
+        });
+    }
 
     // --- INICIALIZAÇÃO E OUVINTES DO SOCKET ---
     async function initializeApp() {
@@ -200,7 +254,13 @@ document.addEventListener('DOMContentLoaded', () => {
             slot.addEventListener('click', () => handleSlotClick(role, teamColor));
         });
         socket.on('connect', () => socket.emit('get-room-list'));
-        socket.on('room-list-update', renderRoomList);
+        
+        // <<< LINHA DE DIAGNÓSTICO ADICIONADA AQUI >>>
+        socket.on('room-list-update', (rooms) => {
+            console.log("CLIENTE: Recebi 'room-list-update'! Salas recebidas:", rooms);
+            renderRoomList(rooms);
+        });
+
         socket.on('room-created', (room) => {
             roomId = room.id;
             mySide = Object.values(room.players)[0].side;
