@@ -112,13 +112,13 @@ body {
 .draft-container {
     display: flex;
     width: 95%;
-    max-width: 1400px;
-    height: 90vh;
+    max-width: 1600px;
+    height: 95vh;
     background-color: #0a1428;
     border: 2px solid #2c3c5c;
 }
 .team-panel {
-    width: 25%;
+    width: 28%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -143,6 +143,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .pick-slot span {
     font-weight: bold;
@@ -157,7 +158,7 @@ body {
 .pick-slot .champion-name { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; text-align: center; padding: 5px 0; font-size: 0.9em; transform: translateY(100%); transition: transform 0.3s; }
 
 .center-panel {
-    width: 50%;
+    width: 44%;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -259,6 +260,37 @@ body {
     transform: translateY(-50%) rotate(-15deg);
     box-shadow: 0 0 5px #000;
 }
+
+/* --- ESTILOS DO PAINEL DE INFORMAÇÕES LATERAL --- */
+.info-panel {
+    width: 100%;
+    flex-grow: 1;
+    margin-top: 20px;
+    background-color: #010a13;
+    border-radius: 4px;
+    border-top: 2px solid #c89b3c;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: none;
+    animation: fadeIn 0.3s;
+}
+.info-panel.visible {
+    display: block;
+}
+.info-header { display: flex; align-items: center; gap: 15px; border-bottom: 1px solid #2c3c5c; padding-bottom: 10px; }
+.info-header img { width: 60px; height: 60px; border: 2px solid #c89b3c; }
+.info-header h2 { font-size: 1.5em; margin: 0; color: #f0e6d2; }
+.info-body { padding-top: 10px; }
+.info-section { margin-bottom: 15px; }
+.info-section h3 { margin-top: 0; margin-bottom: 8px; color: #0ac; font-size: 1em; border-bottom: 1px solid #2c3c5c; padding-bottom: 5px; }
+.info-section p, .info-section ul { margin: 5px 0; font-size: 0.9em; }
+.info-section-row { display: flex; gap: 20px; }
+.info-section-row .info-section { flex: 1; margin-bottom: 0; }
+.info-section ul { list-style: none; padding: 0; }
+.power-spike-container { display: flex; justify-content: space-around; text-align: center; padding-top: 5px; }
+.spike-bar-group span { font-size: 0.8em; color: #a0946c; }
+.spike-bar { height: 50px; width: 20px; background: linear-gradient(to top, #c89b3c 0%, #c89b3c var(--power, 0%), transparent var(--power, 0%)); border: 1px solid #2c3c5c; margin: 0 auto 5px auto; }
 
 
 /* --- ESTILOS DA TELA DE FINALIZAÇÃO --- */

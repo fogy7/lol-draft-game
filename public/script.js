@@ -1,4 +1,4 @@
-// public/script.js - VERSÃO DE DIAGNÓSTICO COMPLETA
+// public/script.js - VERSÃO COM PAINEL DE INFORMAÇÕES LATERAL
 
 document.addEventListener('DOMContentLoaded', () => {
     const socket = io();
@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const redTeamPicksContainer = document.getElementById('red-team-picks');
     const blueTeamBansContainer = document.getElementById('blue-team-bans');
     const redTeamBansContainer = document.getElementById('red-team-bans');
+    const blueInfoPanel = document.getElementById('blue-info-panel');
+    const redInfoPanel = document.getElementById('red-info-panel');
     const resultTitle = document.getElementById('result-title');
     const myFinalScore = document.getElementById('my-final-score');
     const opponentResultTitle = document.getElementById('opponent-result-title');
@@ -49,23 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchTerm = searchInput.value.toLowerCase();
         let filteredChampions = allChampions;
         if (activeRoleFilter !== 'Todos') {
-            filteredChampions = filteredChampions.filter(champ =>
-                champ.tags && champ.tags.includes(activeRoleFilter)
-            );
+            filteredChampions = filteredChampions.filter(champ => champ.tags && champ.tags.includes(activeRoleFilter));
         }
         if (searchTerm) {
-            filteredChampions = filteredChampions.filter(champ =>
-                champ.nome.toLowerCase().includes(searchTerm)
-            );
+            filteredChampions = filteredChampions.filter(champ => champ.nome.toLowerCase().includes(searchTerm));
         }
         populateChampionGrid(filteredChampions);
         if (currentGameState) {
             updateUsedChampions(currentGameState.bannedOrPickedChampions);
         }
     }
-
     searchInput.addEventListener('input', applyFilters);
-
     roleFilters.addEventListener('click', (e) => {
         if (e.target.classList.contains('role-filter-btn')) {
             document.querySelector('.role-filter-btn.active').classList.remove('active');
@@ -76,23 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- LÓGICA DO LOBBY ---
-    sideButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            sideButtons.forEach(btn => btn.classList.remove('selected'));
-            button.classList.add('selected');
-            selectedSide = button.dataset.side;
-            validateCreation();
-        });
-    });
+    sideButtons.forEach(button => { button.addEventListener('click', () => { sideButtons.forEach(btn => btn.classList.remove('selected')); button.classList.add('selected'); selectedSide = button.dataset.side; validateCreation(); }); });
     roomNameInput.addEventListener('input', validateCreation);
     createRoomButton.addEventListener('click', () => socket.emit('create-room', { roomName: roomNameInput.value.trim(), side: selectedSide }));
-    roomList.addEventListener('click', (e) => {
-        if (e.target.classList.contains('join-button')) {
-            socket.emit('join-room', { roomId: e.target.dataset.roomId, side: e.target.dataset.side });
-        }
-    });
+    roomList.addEventListener('click', (e) => { if (e.target.classList.contains('join-button')) { socket.emit('join-room', { roomId: e.target.dataset.roomId, side: e.target.dataset.side }); } });
     function validateCreation() { createRoomButton.disabled = !(roomNameInput.value.trim() && selectedSide); }
-    
     function renderRoomList(rooms) {
         roomList.innerHTML = rooms.length === 0 ? '<p>Nenhuma sala aberta. Crie a sua!</p>' : '';
         rooms.forEach(room => {
@@ -101,19 +85,61 @@ document.addEventListener('DOMContentLoaded', () => {
             const playerSides = Object.values(room.players).map(p => p.side);
             const canJoinBlue = !playerSides.includes('blue');
             const canJoinRed = !playerSides.includes('red');
-            roomItem.innerHTML = `
-                <span>${room.name}</span>
-                <div>
-                    <button class="join-button blue" data-room-id="${room.id}" data-side="blue" ${!canJoinBlue ? 'disabled' : ''}>Entrar Azul</button>
-                    <button class="join-button red" data-room-id="${room.id}" data-side="red" ${!canJoinRed ? 'disabled' : ''}>Entrar Vermelho</button>
-                </div>`;
+            roomItem.innerHTML = `<span>${room.name}</span><div><button class="join-button blue" data-room-id="${room.id}" data-side="blue" ${!canJoinBlue ? 'disabled' : ''}>Entrar Azul</button><button class="join-button red" data-room-id="${room.id}" data-side="red" ${!canJoinRed ? 'disabled' : ''}>Entrar Vermelho</button></div>`;
             roomList.appendChild(roomItem);
         });
     }
+    function showScreen(screenId) { Object.values(screens).forEach(screen => screen.classList.remove('visible')); screens[screenId].classList.add('visible'); }
 
-    function showScreen(screenId) {
-        Object.values(screens).forEach(screen => screen.classList.remove('visible'));
-        screens[screenId].classList.add('visible');
+    // --- LÓGICA DO PAINEL DE INFORMAÇÕES ---
+    function showChampionInfo(championId, teamColor) {
+        const champData = allChampions.find(c => c.id === championId);
+        if (!champData) return;
+
+        blueInfoPanel.style.display = 'none';
+        redInfoPanel.style.display = 'none';
+        const targetPanel = teamColor === 'blue' ? blueInfoPanel : redInfoPanel;
+
+        const powerMap = { 'Forte': 100, 'Razoável': 60, 'Fraco': 25 };
+        const earlyPower = powerMap[champData.pico_poder?.early] || 0;
+        const midPower = powerMap[champData.pico_poder?.mid] || 0;
+        const latePower = powerMap[champData.pico_poder?.late] || 0;
+
+        targetPanel.innerHTML = `
+            <div class="info-header">
+                <img src="${DDRAGON_URL}${champData.id}.png" alt="${champData.nome}">
+                <h2>${champData.nome}</h2>
+            </div>
+            <div class="info-body">
+                <div class="info-section">
+                    <h3>Papel no Jogo</h3>
+                    <p>${champData.papel_jogo || "Não especificado."}</p>
+                </div>
+                <div class="info-section">
+                    <h3>Pico de Poder</h3>
+                    <div class="power-spike-container">
+                        <div class="spike-bar-group"><div class="spike-bar" style="--power: ${earlyPower}%"></div><span>Early</span></div>
+                        <div class="spike-bar-group"><div class="spike-bar" style="--power: ${midPower}%"></div><span>Mid</span></div>
+                        <div class="spike-bar-group"><div class="spike-bar" style="--power: ${latePower}%"></div><span>Late</span></div>
+                    </div>
+                </div>
+                <div class="info-section">
+                    <h3>Atributos de Dano</h3>
+                    <p><strong>Tipo:</strong> ${champData.tipo_dano || "?"}</p>
+                    <p><strong>Nível:</strong> ${champData.nivel_dano || "?"}</p>
+                </div>
+                <div class="info-section-row">
+                    <div class="info-section">
+                        <h3>Forte Contra</h3>
+                        <ul>${(champData.countera || []).map(c => `<li>${c}</li>`).join('') || "<li>Nenhum</li>"}</ul>
+                    </div>
+                    <div class="info-section">
+                        <h3>Fraco Contra</h3>
+                        <ul>${(champData.counterado_por || []).map(c => `<li>${c}</li>`).join('') || "<li>Nenhum</li>"}</ul>
+                    </div>
+                </div>
+            </div>`;
+        targetPanel.classList.add('visible');
     }
 
     // --- LÓGICA DO DRAFT E BAN ---
@@ -158,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LÓGICA DA TELA FINAL ---
     playAgainButton.addEventListener('click', () => socket.emit('reset-game', roomId));
-    
     function showEndScreen(state) {
         showScreen('end');
         const winner = state.blueScore > state.redScore ? 'blue' : 'red';
@@ -186,6 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
         currentGameState = room.gameState;
         if (!currentGameState) return;
         const { turn, blueBans, redBans, blueTeam, redTeam, bannedOrPickedChampions } = currentGameState;
+        
+        blueInfoPanel.classList.remove('visible');
+        redInfoPanel.classList.remove('visible');
+        
         applyFilters();
         if (turn >= DRAFT_ORDER.length) {
             showEndScreen(currentGameState);
@@ -229,13 +258,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (champion) {
                 slot.innerHTML = `<img src="${DDRAGON_URL}${champion.id}.png" alt="${champion.nome}"><div class="champion-name">${champion.nome}</div>`;
                 slot.classList.add('filled');
-                slot.classList.remove('available');
+                slot.dataset.championId = champion.id;
             } else {
                 slot.innerHTML = `<span>${role.toUpperCase()}</span>`;
                 slot.classList.remove('filled');
-                const isAvailable = currentAction.type === 'pick' && currentAction.team === teamColor && mySide === teamColor && selectedChampion;
-                slot.classList.toggle('available', isAvailable);
+                slot.removeAttribute('data-champion-id');
             }
+            const isAvailable = currentAction.type === 'pick' && currentAction.team === teamColor && mySide === teamColor && selectedChampion;
+            slot.classList.toggle('available', isAvailable);
         });
     }
 
@@ -248,19 +278,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const championsResponse = await fetch('campeoes.json');
         allChampions = await championsResponse.json();
         populateChampionGrid(allChampions);
+
         document.querySelectorAll('.pick-slot').forEach(slot => {
             const role = slot.dataset.role;
             const teamColor = slot.closest('.team-panel').classList.contains('blue-team') ? 'blue' : 'red';
             slot.addEventListener('click', () => handleSlotClick(role, teamColor));
         });
-        socket.on('connect', () => socket.emit('get-room-list'));
-        
-        // <<< LINHA DE DIAGNÓSTICO ADICIONADA AQUI >>>
-        socket.on('room-list-update', (rooms) => {
-            console.log("CLIENTE: Recebi 'room-list-update'! Salas recebidas:", rooms);
-            renderRoomList(rooms);
+
+        blueTeamPicksContainer.addEventListener('click', (e) => {
+            const slot = e.target.closest('.pick-slot.filled');
+            if (slot && slot.dataset.championId) {
+                showChampionInfo(slot.dataset.championId, 'blue');
+            }
+        });
+        redTeamPicksContainer.addEventListener('click', (e) => {
+            const slot = e.target.closest('.pick-slot.filled');
+            if (slot && slot.dataset.championId) {
+                showChampionInfo(slot.dataset.championId, 'red');
+            }
         });
 
+        socket.on('connect', () => socket.emit('get-room-list'));
+        socket.on('room-list-update', renderRoomList);
         socket.on('room-created', (room) => {
             roomId = room.id;
             mySide = Object.values(room.players)[0].side;
