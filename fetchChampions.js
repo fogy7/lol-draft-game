@@ -3,7 +3,7 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
-// ATUALIZE A VERSÃO CONFORME NECESSÁRIO (ex: '15.17.1')
+// ATUALIZE A VERSÃO CONFORME NECESSÁRIO
 // Pode encontrar a versão mais recente em: https://ddragon.leagueoflegends.com/api/versions.json
 const DDRAGON_VERSION = '15.17.1'; 
 const DDRAGON_URL = `https://ddragon.leagueoflegends.com/cdn/${DDRAGON_VERSION}/data/pt_BR/champion.json`;
@@ -19,27 +19,26 @@ async function fetchAndProcessChampions() {
         for (const key in championsData) {
             const champ = championsData[key];
 
-            let funcao_primaria = 'Indefinido';
-            if (champ.tags.includes('Fighter')) funcao_primaria = 'Lutador';
-            if (champ.tags.includes('Tank')) funcao_primaria = 'Tanque';
-            if (champ.tags.includes('Mage')) funcao_primaria = 'Mago';
-            if (champ.tags.includes('Assassin')) funcao_primaria = 'Assassino';
-            if (champ.tags.includes('Marksman')) funcao_primaria = 'Atirador';
-            if (champ.tags.includes('Support')) funcao_primaria = 'Suporte';
+            // Tenta adivinhar o tipo de dano principal
+            let tipo_dano = 'Híbrido';
+            if (champ.info.magic > champ.info.physical && champ.info.physical < 4) tipo_dano = 'AP';
+            if (champ.info.physical > champ.info.magic && champ.info.magic < 4) tipo_dano = 'AD';
             
             processedChampions.push({
                 id: champ.id,
                 nome: champ.name,
-                tags: champ.tags, // CORREÇÃO: Adiciona as tags originais para o filtro
-                funcao_primaria: funcao_primaria, // Mantém a nossa lógica de função primária
-                // --- CAMPOS PARA PREENCHER MANUALMENTE ---
-                tipo_dano: "", 
-                nivel_cc: "", 
-                estilo_jogo: [],
-                forca: "", 
-                tipo_de_engage: "",
-                sinergias_fortes_com: [],
-                fraco_contra: []
+                tags: champ.tags,
+                // --- NOVOS CAMPOS ADICIONADOS AQUI ---
+                papel_jogo: "", // Ex: "Mago de controle com alto dano em área."
+                pico_poder: {
+                    early: "", // Preencher com: Forte, Razoável, Fraco
+                    mid: "",   // Preencher com: Forte, Razoável, Fraco
+                    late: ""   // Preencher com: Forte, Razoável, Fraco
+                },
+                tipo_dano: tipo_dano, // Pré-preenchido, mas você pode ajustar
+                nivel_dano: "", // Preencher com: Alto, Médio, Baixo
+                countera: [], // Ex: ["Yasuo", "Zed", "Veigar"]
+                counterado_por: [] // Ex: ["Fizz", "Kassadin", "Diana"]
             });
         }
 

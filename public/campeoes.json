@@ -5,14 +5,16 @@
     "tags": [
       "Fighter"
     ],
-    "funcao_primaria": "Lutador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ahri",
@@ -21,14 +23,16 @@
       "Mage",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Akali",
@@ -36,14 +40,16 @@
     "tags": [
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Akshan",
@@ -52,14 +58,16 @@
       "Marksman",
       "Assassin"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Alistar",
@@ -68,14 +76,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ambessa",
@@ -84,14 +94,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Amumu",
@@ -100,14 +112,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Anivia",
@@ -115,14 +129,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Annie",
@@ -131,14 +147,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Aphelios",
@@ -146,14 +164,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ashe",
@@ -162,14 +182,16 @@
       "Marksman",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "AurelionSol",
@@ -177,14 +199,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Aurora",
@@ -193,14 +217,16 @@
       "Mage",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Azir",
@@ -209,14 +235,16 @@
       "Mage",
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Bard",
@@ -225,14 +253,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Belveth",
@@ -240,14 +270,16 @@
     "tags": [
       "Fighter"
     ],
-    "funcao_primaria": "Lutador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Blitzcrank",
@@ -256,14 +288,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Brand",
@@ -272,14 +306,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Braum",
@@ -288,14 +324,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Briar",
@@ -304,14 +342,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Caitlyn",
@@ -319,14 +359,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Camille",
@@ -335,14 +377,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Cassiopeia",
@@ -350,14 +394,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Chogath",
@@ -366,14 +412,16 @@
       "Tank",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Corki",
@@ -382,14 +430,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Darius",
@@ -398,14 +448,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Diana",
@@ -414,14 +466,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "DrMundo",
@@ -430,14 +484,16 @@
       "Tank",
       "Fighter"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Draven",
@@ -445,14 +501,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ekko",
@@ -461,14 +519,16 @@
       "Assassin",
       "Mage"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Elise",
@@ -477,14 +537,16 @@
       "Assassin",
       "Mage"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Evelynn",
@@ -493,14 +555,16 @@
       "Assassin",
       "Mage"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ezreal",
@@ -509,14 +573,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Fiddlesticks",
@@ -525,14 +591,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Fiora",
@@ -541,14 +609,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Fizz",
@@ -557,14 +627,16 @@
       "Assassin",
       "Fighter"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Galio",
@@ -573,14 +645,16 @@
       "Tank",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Gangplank",
@@ -588,14 +662,16 @@
     "tags": [
       "Fighter"
     ],
-    "funcao_primaria": "Lutador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Garen",
@@ -604,14 +680,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Gnar",
@@ -620,14 +698,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Gragas",
@@ -636,14 +716,16 @@
       "Fighter",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Graves",
@@ -651,14 +733,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Gwen",
@@ -666,14 +750,16 @@
     "tags": [
       "Fighter"
     ],
-    "funcao_primaria": "Lutador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Hecarim",
@@ -682,14 +768,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Heimerdinger",
@@ -698,14 +786,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Hwei",
@@ -714,14 +804,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Illaoi",
@@ -730,14 +822,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Irelia",
@@ -746,14 +840,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ivern",
@@ -762,14 +858,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Janna",
@@ -778,14 +876,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "JarvanIV",
@@ -794,14 +894,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Jax",
@@ -809,14 +911,16 @@
     "tags": [
       "Fighter"
     ],
-    "funcao_primaria": "Lutador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Jayce",
@@ -825,14 +929,16 @@
       "Fighter",
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Jhin",
@@ -841,14 +947,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Jinx",
@@ -856,14 +964,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "KSante",
@@ -872,14 +982,16 @@
       "Tank",
       "Fighter"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Kaisa",
@@ -888,14 +1000,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Kalista",
@@ -903,14 +1017,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Karma",
@@ -919,14 +1035,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Karthus",
@@ -934,14 +1052,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Kassadin",
@@ -950,14 +1070,16 @@
       "Assassin",
       "Mage"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Katarina",
@@ -966,14 +1088,16 @@
       "Assassin",
       "Mage"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Kayle",
@@ -982,14 +1106,16 @@
       "Mage",
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Kayn",
@@ -998,14 +1124,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Kennen",
@@ -1013,14 +1141,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Khazix",
@@ -1028,14 +1158,16 @@
     "tags": [
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Kindred",
@@ -1043,14 +1175,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Kled",
@@ -1058,14 +1192,16 @@
     "tags": [
       "Fighter"
     ],
-    "funcao_primaria": "Lutador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "KogMaw",
@@ -1074,14 +1210,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Leblanc",
@@ -1090,14 +1228,16 @@
       "Assassin",
       "Mage"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "LeeSin",
@@ -1106,14 +1246,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Leona",
@@ -1122,14 +1264,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Lillia",
@@ -1138,14 +1282,16 @@
       "Fighter",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Lissandra",
@@ -1153,14 +1299,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Lucian",
@@ -1169,14 +1317,16 @@
       "Marksman",
       "Assassin"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Lulu",
@@ -1185,14 +1335,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Lux",
@@ -1201,14 +1353,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Malphite",
@@ -1217,14 +1371,16 @@
       "Tank",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Malzahar",
@@ -1232,14 +1388,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Maokai",
@@ -1248,14 +1406,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "MasterYi",
@@ -1264,14 +1424,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Mel",
@@ -1280,14 +1442,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Milio",
@@ -1296,14 +1460,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "MissFortune",
@@ -1312,14 +1478,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Mordekaiser",
@@ -1328,14 +1496,16 @@
       "Fighter",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Morgana",
@@ -1344,14 +1514,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Naafiri",
@@ -1360,14 +1532,16 @@
       "Assassin",
       "Fighter"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Nami",
@@ -1376,14 +1550,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Nasus",
@@ -1392,14 +1568,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Nautilus",
@@ -1408,14 +1586,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Neeko",
@@ -1424,14 +1604,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Nidalee",
@@ -1440,14 +1622,16 @@
       "Assassin",
       "Mage"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Nilah",
@@ -1456,14 +1640,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Nocturne",
@@ -1472,14 +1658,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Nunu",
@@ -1488,14 +1676,16 @@
       "Tank",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Olaf",
@@ -1504,14 +1694,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Orianna",
@@ -1520,14 +1712,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ornn",
@@ -1535,14 +1729,16 @@
     "tags": [
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Pantheon",
@@ -1551,14 +1747,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Poppy",
@@ -1567,14 +1765,16 @@
       "Tank",
       "Fighter"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Pyke",
@@ -1583,14 +1783,16 @@
       "Support",
       "Assassin"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Qiyana",
@@ -1598,14 +1800,16 @@
     "tags": [
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Quinn",
@@ -1614,14 +1818,16 @@
       "Marksman",
       "Assassin"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Rakan",
@@ -1629,14 +1835,16 @@
     "tags": [
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Rammus",
@@ -1644,14 +1852,16 @@
     "tags": [
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "RekSai",
@@ -1660,14 +1870,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Rell",
@@ -1676,14 +1888,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Renata",
@@ -1692,14 +1906,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Renekton",
@@ -1708,14 +1924,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Rengar",
@@ -1724,14 +1942,16 @@
       "Assassin",
       "Fighter"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Riven",
@@ -1740,14 +1960,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Rumble",
@@ -1756,14 +1978,16 @@
       "Fighter",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ryze",
@@ -1771,14 +1995,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Samira",
@@ -1787,14 +2013,16 @@
       "Marksman",
       "Assassin"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Sejuani",
@@ -1802,14 +2030,16 @@
     "tags": [
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Senna",
@@ -1818,14 +2048,16 @@
       "Support",
       "Marksman"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Seraphine",
@@ -1834,14 +2066,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Sett",
@@ -1850,14 +2084,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Shaco",
@@ -1865,14 +2101,16 @@
     "tags": [
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Shen",
@@ -1880,14 +2118,16 @@
     "tags": [
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Shyvana",
@@ -1896,14 +2136,16 @@
       "Fighter",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Singed",
@@ -1912,14 +2154,16 @@
       "Tank",
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Sion",
@@ -1928,14 +2172,16 @@
       "Tank",
       "Fighter"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Sivir",
@@ -1943,14 +2189,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Skarner",
@@ -1959,14 +2207,16 @@
       "Tank",
       "Fighter"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Smolder",
@@ -1975,14 +2225,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Sona",
@@ -1991,14 +2243,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Soraka",
@@ -2007,14 +2261,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Swain",
@@ -2023,14 +2279,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Sylas",
@@ -2039,14 +2297,16 @@
       "Mage",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Syndra",
@@ -2054,14 +2314,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "TahmKench",
@@ -2070,14 +2332,16 @@
       "Tank",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Taliyah",
@@ -2086,14 +2350,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Talon",
@@ -2101,14 +2367,16 @@
     "tags": [
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Taric",
@@ -2117,14 +2385,16 @@
       "Support",
       "Tank"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Teemo",
@@ -2133,14 +2403,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Thresh",
@@ -2149,14 +2421,16 @@
       "Support",
       "Tank"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Tristana",
@@ -2165,14 +2439,16 @@
       "Marksman",
       "Assassin"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Trundle",
@@ -2181,14 +2457,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Tryndamere",
@@ -2197,14 +2475,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "TwistedFate",
@@ -2213,14 +2493,16 @@
       "Mage",
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Twitch",
@@ -2229,14 +2511,16 @@
       "Marksman",
       "Assassin"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Udyr",
@@ -2245,14 +2529,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Urgot",
@@ -2261,14 +2547,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Varus",
@@ -2277,14 +2565,16 @@
       "Marksman",
       "Mage"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Vayne",
@@ -2293,14 +2583,16 @@
       "Marksman",
       "Assassin"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Veigar",
@@ -2308,14 +2600,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Velkoz",
@@ -2324,14 +2618,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Vex",
@@ -2339,14 +2635,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Vi",
@@ -2355,14 +2653,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Viego",
@@ -2371,14 +2671,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Viktor",
@@ -2386,14 +2688,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Vladimir",
@@ -2402,14 +2706,16 @@
       "Mage",
       "Fighter"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Volibear",
@@ -2418,14 +2724,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Warwick",
@@ -2434,14 +2742,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "MonkeyKing",
@@ -2450,14 +2760,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Xayah",
@@ -2465,14 +2777,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Xerath",
@@ -2481,14 +2795,16 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "XinZhao",
@@ -2497,14 +2813,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Yasuo",
@@ -2513,14 +2831,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Yone",
@@ -2529,14 +2849,16 @@
       "Fighter",
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Yorick",
@@ -2545,14 +2867,16 @@
       "Fighter",
       "Tank"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Yunara",
@@ -2560,14 +2884,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Yuumi",
@@ -2576,14 +2902,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Zac",
@@ -2592,14 +2920,16 @@
       "Tank",
       "Fighter"
     ],
-    "funcao_primaria": "Tanque",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Zed",
@@ -2607,14 +2937,16 @@
     "tags": [
       "Assassin"
     ],
-    "funcao_primaria": "Assassino",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Zeri",
@@ -2622,14 +2954,16 @@
     "tags": [
       "Marksman"
     ],
-    "funcao_primaria": "Atirador",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Ziggs",
@@ -2637,14 +2971,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Zilean",
@@ -2653,14 +2989,16 @@
       "Support",
       "Mage"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Zoe",
@@ -2668,14 +3006,16 @@
     "tags": [
       "Mage"
     ],
-    "funcao_primaria": "Mago",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "Híbrido",
+    "nivel_dano": "",
+    "countera": [],
+    "counterado_por": []
   },
   {
     "id": "Zyra",
@@ -2684,13 +3024,15 @@
       "Mage",
       "Support"
     ],
-    "funcao_primaria": "Suporte",
-    "tipo_dano": "",
-    "nivel_cc": "",
-    "estilo_jogo": [],
-    "forca": "",
-    "tipo_de_engage": "",
-    "sinergias_fortes_com": [],
-    "fraco_contra": []
+    "papel_jogo": "",
+    "pico_poder": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "tipo_dano": "AP",
+    "nivel_dano": "Médio/Alto",
+    "countera": [],
+    "counterado_por": []
   }
 ]
