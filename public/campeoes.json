@@ -5,16 +5,16 @@
     "tags": [
       "Fighter"
     ],
-    "papel_jogo": "",
+    "papel_jogo": ""Um colosso da rota superior que se destaca em lutas prolongadas graças à sua alta capacidade de cura e dano em área. Ele é um duelista forte que pode virar o jogo nas lutas em equipe com seu potencial de dano e alta cura.",
     "pico_poder": {
-      "early": "",
-      "mid": "",
-      "late": ""
+      "early": "Razoável",
+      "mid": "Forte",
+      "late": "Razoável"
     },
-    "tipo_dano": "Híbrido",
-    "nivel_dano": "",
+    "tipo_dano": "AD",
+    "nivel_dano": "Médio",
     "countera": [],
-    "counterado_por": []
+    "counterado_por": [Gnar, Quinn, Irelia]
   },
   {
     "id": "Ahri",
@@ -23,14 +23,14 @@
       "Mage",
       "Assassin"
     ],
-    "papel_jogo": "",
+    "papel_jogo": "Uma maga assassina com alta mobilidade, especializada em isolar e eliminar alvos prioritários. Sua capacidade de roaming e controle de grupo com seu 'E' a torna uma ameaça constante no mapa.",
     "pico_poder": {
-      "early": "",
-      "mid": "",
-      "late": ""
+      "early": "Razoável",
+      "mid": "Forte",
+      "late": "Forte"
     },
-    "tipo_dano": "Híbrido",
-    "nivel_dano": "",
+    "tipo_dano": "AP",
+    "nivel_dano": "Médio Alto",
     "countera": [],
     "counterado_por": []
   },
@@ -40,14 +40,14 @@
     "tags": [
       "Assassin"
     ],
-    "papel_jogo": "",
+    "papel_jogo": "Uma assassina altamente móvel com a capacidade de entrar e sair de lutas com facilidade. Ela se destaca em eliminar alvos frágeis na linha de trás inimiga, utilizando sua ULTIMATE para se reposicionar após a execução.",
     "pico_poder": {
-      "early": "",
-      "mid": "",
-      "late": ""
+      "early": "Forte",
+      "mid": "Forte",
+      "late": "Razoável"
     },
-    "tipo_dano": "Híbrido",
-    "nivel_dano": "",
+    "tipo_dano": "AP",
+    "nivel_dano": "Alto",
     "countera": [],
     "counterado_por": []
   },
@@ -58,14 +58,14 @@
       "Marksman",
       "Assassin"
     ],
-    "papel_jogo": "",
+    "papel_jogo": "Um atirador assassino que se destaca no meio do jogo com sua mobilidade única e a capacidade de reviver aliados. Ele exerce pressão constante no mapa com seu roaming e potencial de punir erros inimigos.",
     "pico_poder": {
-      "early": "",
-      "mid": "",
-      "late": ""
+      "early": "Fraco",
+      "mid": "Razoável",
+      "late": "Forte"
     },
-    "tipo_dano": "Híbrido",
-    "nivel_dano": "",
+    "tipo_dano": "AD",
+    "nivel_dano": "Alto",
     "countera": [],
     "counterado_por": []
   },
@@ -76,16 +76,16 @@
       "Tank",
       "Support"
     ],
-    "papel_jogo": "",
+    "papel_jogo": "Um suporte tanque de iniciação robusto, focado em controle de grupo e em proteger seus carregadores. Sua combinação de habilidades o torna excelente para engajar lutas e desorganizar a formação inimiga.",
     "pico_poder": {
       "early": "",
       "mid": "",
       "late": ""
     },
-    "tipo_dano": "Híbrido",
-    "nivel_dano": "",
-    "countera": [],
-    "counterado_por": []
+    "tipo_dano": "AP",
+    "nivel_dano": "Razoável",
+    "countera": [Leona],
+    "counterado_por": [Janna, Morgana]
   },
   {
     "id": "Ambessa",
@@ -94,16 +94,16 @@
       "Fighter",
       "Assassin"
     ],
-    "papel_jogo": "",
+    "papel_jogo": "Uma lutadora de investida agressiva, projetada para mergulhar na linha de trás inimiga e causar dano em área. Sua jogabilidade é focada em iniciar combates e eliminar alvos prioritários",
     "pico_poder": {
-      "early": "",
-      "mid": "",
-      "late": ""
+      "early": "Razoável",
+      "mid": "Forte",
+      "late": "Forte"
     },
-    "tipo_dano": "Híbrido",
+    "tipo_dano": "AD",
     "nivel_dano": "",
     "countera": [],
-    "counterado_por": []
+    "counterado_por": [Renekto]
   },
   {
     "id": "Amumu",
